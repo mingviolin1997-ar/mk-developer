@@ -14,10 +14,26 @@ type Repository = {
   stargazers_count: number;
   fork: boolean;
   archived: boolean;
+  cta_label?: string;
 };
 
 const OWNER = "mingviolin1997-ar";
 const API = `https://api.github.com/users/${OWNER}/repos?type=owner&sort=updated&per_page=100`;
+
+const wonderGPTRelease: Repository = {
+  id: -26,
+  name: "WonderGPT",
+  html_url: `https://github.com/${OWNER}/mk-developer/releases/download/wonder-gpt-v0.5.0-beta.6/Wonder-GPT-0.5.0-Build26.zip`,
+  description: "以无障碍为首要目标的多模型 AI 工作空间。支持 VoiceOver、本地模型、在线模型、OCR、Skill 与可访问的项目管理；当前版本适用于 Apple Silicon Mac。",
+  homepage: `https://github.com/${OWNER}/mk-developer/releases/tag/wonder-gpt-v0.5.0-beta.6`,
+  language: "Swift",
+  topics: ["macos", "accessibility", "local-ai", "beta"],
+  updated_at: "2026-08-10T13:06:00Z",
+  stargazers_count: 0,
+  fork: false,
+  archived: false,
+  cta_label: "下载测试版",
+};
 
 const featuredFallback: Repository = {
   id: 1328609254,
@@ -34,6 +50,7 @@ const featuredFallback: Repository = {
 };
 
 function titleFor(name: string) {
+  if (name === "WonderGPT") return "Wonder GPT";
   if (name === "photo-accessibility-studio") return "照片无障碍描述";
   return name
     .split("-")
@@ -64,15 +81,15 @@ function ProjectCard({ repo, featured = false }: { repo: Repository; featured?: 
         {repo.topics.slice(0, 3).map((topic) => <span key={topic}>{topic}</span>)}
       </div>
       <div className="card-actions">
-        <a href={repo.html_url} target="_blank" rel="noreferrer">查看项目 <span aria-hidden="true">↗</span></a>
-        {repo.homepage && <a className="secondary-link" href={repo.homepage} target="_blank" rel="noreferrer">打开网站</a>}
+        <a href={repo.html_url} target="_blank" rel="noreferrer">{repo.cta_label ?? "查看项目"} <span aria-hidden="true">↗</span></a>
+        {repo.homepage && <a className="secondary-link" href={repo.homepage} target="_blank" rel="noreferrer">查看发行说明</a>}
       </div>
     </article>
   );
 }
 
 export default function Home() {
-  const [repos, setRepos] = useState<Repository[]>([featuredFallback]);
+  const [repos, setRepos] = useState<Repository[]>([wonderGPTRelease, featuredFallback]);
   const [status, setStatus] = useState<"loading" | "live" | "fallback">("loading");
   const [filter, setFilter] = useState("全部");
 
@@ -83,11 +100,14 @@ export default function Home() {
         return response.json();
       })
       .then((data: Repository[]) => {
-        const visible = data.filter((repo) => !repo.fork && !repo.archived && repo.name !== "mk-developer-site");
-        setRepos(visible.length ? visible : [featuredFallback]);
+        const visible = data.filter((repo) => !repo.fork && !repo.archived && repo.name !== "mk-developer");
+        setRepos([wonderGPTRelease, ...(visible.length ? visible : [featuredFallback])]);
         setStatus("live");
       })
-      .catch(() => setStatus("fallback"));
+      .catch(() => {
+        setRepos([wonderGPTRelease, featuredFallback]);
+        setStatus("fallback");
+      });
   }, []);
 
   const types = useMemo(() => ["全部", ...Array.from(new Set(repos.map(typeFor)))], [repos]);
@@ -120,7 +140,7 @@ export default function Home() {
       <section className="projects shell" id="projects">
         <div className="section-heading">
           <div><p className="section-number">01 / PROJECTS</p><h2>项目</h2></div>
-          <p>公开仓库会自动出现在这里，最近更新的项目排在最前。</p>
+          <p>公开项目与安装包会同步到这里，最近更新的内容排在最前。</p>
         </div>
         <div className="filters" aria-label="项目类型筛选">
           {types.map((type) => <button key={type} className={filter === type ? "active" : ""} onClick={() => setFilter(type)}>{type}</button>)}
@@ -144,7 +164,7 @@ export default function Home() {
 
       <footer className="footer shell">
         <div><a className="brand" href="#top"><span>MK</span> Developer</a><p>Software · Plugins · Skills · Extensions</p></div>
-        <div className="footer-right"><p>© {new Date().getFullYear()} MK Developer</p><p>与 GitHub 公开仓库实时同步</p></div>
+        <div className="footer-right"><p>© {new Date().getFullYear()} MK Developer</p><p>与 GitHub 公开项目及发行版同步</p></div>
       </footer>
     </main>
   );
