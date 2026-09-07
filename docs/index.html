@@ -18,6 +18,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-download" href="/wonder-reader/">Wonder 阅读：Mac 免费下载</a>
   <a class="skip-download" href="/reader-sources/">小铭读书：下载书源配置</a>
   <nav class="nav shell"><a class="brand" href="#top"><b>MK</b>Developer</a><div class="links"><a href="#projects">项目</a><a href="https://github.com/mingviolin1997-ar">GitHub</a><a class="music" href="https://mk-musician.com">音乐人主页 ↗</a></div></nav>
   <main>
@@ -28,13 +29,14 @@
   <footer class="footer shell"><div><a class="brand" href="#top"><b>MK</b>Developer</a><p>Software · Plugins · Skills · Extensions</p></div><div class="fr"><p>© 2026 MK Developer</p><p>与 GitHub 公开项目及发行版同步</p></div></footer>
   <script>
     const owner='mingviolin1997-ar';let repos=[];
+    const wonderReader={id:-35,name:'Wonder 阅读',html_url:'/wonder-reader/',cta_label:'免费下载',description:'Mac 无障碍阅读器，语音阅读、OCR、翻译与总结全部免费。内置 Low 模型，无需额外配置。适用于 Apple 芯片 Mac，macOS 14 或更新。',language:'Swift',topics:['macos','accessibility','local-ai'],updated_at:'2026-09-07T20:00:00Z'};
     const wonderGPT={id:-26,name:'WonderGPT',html_url:`https://github.com/${owner}/mk-developer/releases/download/wonder-gpt-v0.5.0-beta.6/Wonder-GPT-0.5.0-Build26.zip`,release_url:`https://github.com/${owner}/mk-developer/releases/tag/wonder-gpt-v0.5.0-beta.6`,cta_label:'下载测试版',description:'以无障碍为首要目标的多模型 AI 工作空间。支持 VoiceOver、本地模型、在线模型、OCR、Skill 与可访问的项目管理；当前版本适用于 Apple Silicon Mac。',language:'Swift',topics:['macos','accessibility','local-ai','beta'],updated_at:'2026-08-10T13:06:00Z'};
     const fallback={id:1,name:'photo-accessibility-studio',html_url:`https://github.com/${owner}/photo-accessibility-studio`,description:'Mac 与 Android 双端的本地批量照片无障碍描述工具。',language:'Swift',topics:['macos','android','accessibility'],updated_at:'2026-08-09T00:00:00Z'};
     const kind=r=>{const s=`${r.name} ${r.description||''} ${(r.topics||[]).join(' ')}`.toLowerCase();return /extension|browser|chrome|firefox|safari/.test(s)?'浏览器扩展':/skill|codex|agent/.test(s)?'Skill':/plugin|插件/.test(s)?'插件':'软件'};
     const title=r=>r.name==='WonderGPT'?'Wonder GPT':r.name==='photo-accessibility-studio'?'照片无障碍描述':r.name.split('-').map(x=>x[0].toUpperCase()+x.slice(1)).join(' ');
     function render(filter='全部'){const list=filter==='全部'?repos:repos.filter(r=>kind(r)===filter);document.querySelector('#grid').innerHTML=list.map((r,i)=>`<article class="card ${i===0&&filter==='全部'?'featured':''}"><div class="top"><span class="type">${kind(r)}</span><span>更新于 ${new Date(r.updated_at).toLocaleDateString('zh-CN')}</span></div><h3>${title(r)}</h3><p>${r.description||'一个正在持续完善的独立项目。'}</p><div class="tags">${[r.language,...(r.topics||[]).slice(0,3)].filter(Boolean).map(x=>`<span>${x}</span>`).join('')}</div><a class="cardlink" href="${r.html_url}">${r.cta_label||'查看项目'} ↗</a></article>`).join('');document.querySelectorAll('#filters button').forEach(b=>b.classList.toggle('active',b.textContent===filter))}
     function filters(){const types=['全部',...new Set(repos.map(kind))];document.querySelector('#filters').innerHTML=types.map(x=>`<button>${x}</button>`).join('');document.querySelectorAll('#filters button').forEach(b=>b.onclick=()=>render(b.textContent));render()}
-    fetch(`https://api.github.com/users/${owner}/repos?type=owner&sort=updated&per_page=100`,{headers:{Accept:'application/vnd.github+json'}}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(data=>{const visible=data.filter(r=>!r.fork&&!r.archived&&r.name!=='mk-developer');repos=[wonderGPT,...(visible.length?visible:[fallback])];document.querySelector('#sync').textContent='已实时同步';document.querySelector('#sync').className='live';filters()}).catch(()=>{repos=[wonderGPT,fallback];document.querySelector('#sync').textContent='稍后重试';filters()});
+    fetch(`https://api.github.com/users/${owner}/repos?type=owner&sort=updated&per_page=100`,{headers:{Accept:'application/vnd.github+json'}}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(data=>{const visible=data.filter(r=>!r.fork&&!r.archived&&r.name!=='mk-developer');repos=[wonderReader,wonderGPT,...(visible.length?visible:[fallback])];document.querySelector('#sync').textContent='已实时同步';document.querySelector('#sync').className='live';filters()}).catch(()=>{repos=[wonderReader,wonderGPT,fallback];document.querySelector('#sync').textContent='稍后重试';filters()});
   </script>
 </body>
 </html>

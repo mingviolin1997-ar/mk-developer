@@ -20,6 +20,13 @@ type Repository = {
 const OWNER = "mingviolin1997-ar";
 const API = `https://api.github.com/users/${OWNER}/repos?type=owner&sort=updated&per_page=100`;
 
+const wonderReaderRelease: Repository = {
+  id: -35, name: "Wonder 阅读", html_url: "/wonder-reader/",
+  description: "Mac 无障碍阅读器，语音阅读、OCR、翻译与总结全部免费。内置 Low 模型。适用于 Apple 芯片 Mac，macOS 14 或更新。",
+  homepage: null, language: "Swift", topics: ["macos", "accessibility", "local-ai"],
+  updated_at: "2026-09-07T20:00:00Z", stargazers_count: 0, fork: false, archived: false, cta_label: "免费下载",
+};
+
 const wonderGPTRelease: Repository = {
   id: -26,
   name: "WonderGPT",
@@ -89,7 +96,7 @@ function ProjectCard({ repo, featured = false }: { repo: Repository; featured?: 
 }
 
 export default function Home() {
-  const [repos, setRepos] = useState<Repository[]>([wonderGPTRelease, featuredFallback]);
+  const [repos, setRepos] = useState<Repository[]>([wonderReaderRelease, wonderGPTRelease, featuredFallback]);
   const [status, setStatus] = useState<"loading" | "live" | "fallback">("loading");
   const [filter, setFilter] = useState("全部");
 
@@ -101,11 +108,11 @@ export default function Home() {
       })
       .then((data: Repository[]) => {
         const visible = data.filter((repo) => !repo.fork && !repo.archived && repo.name !== "mk-developer");
-        setRepos([wonderGPTRelease, ...(visible.length ? visible : [featuredFallback])]);
+        setRepos([wonderReaderRelease, wonderGPTRelease, ...(visible.length ? visible : [featuredFallback])]);
         setStatus("live");
       })
       .catch(() => {
-        setRepos([wonderGPTRelease, featuredFallback]);
+        setRepos([wonderReaderRelease, wonderGPTRelease, featuredFallback]);
         setStatus("fallback");
       });
   }, []);
