@@ -1,4 +1,14 @@
 {
-  "tingxian": { "status": "pending", "version": "0.2.0", "build": "4" },
-  "reader": { "status": "pending", "version": "1.0", "build": "28" }
+  "tingxian": {
+    "status": "ready",
+    "version": "0.2.0",
+    "build": "4",
+    "manifest": "https://dev.mk-musician.com/test/packages/tingxian-4.plist"
+  },
+  "reader": {
+    "status": "ready",
+    "version": "1.0",
+    "build": "28",
+    "manifest": "https://dev.mk-musician.com/test/packages/reader-28.plist"
+  }
 }
