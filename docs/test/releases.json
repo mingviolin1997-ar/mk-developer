@@ -8,7 +8,7 @@
   "reader": {
     "status": "ready",
     "version": "1.0",
-    "build": "28",
-    "manifest": "https://dev.mk-musician.com/test/packages/reader-28.plist"
+    "build": "29",
+    "manifest": "https://dev.mk-musician.com/test/packages/reader-29.plist"
   }
 }
