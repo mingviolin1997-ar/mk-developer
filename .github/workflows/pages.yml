@@ -31,3 +31,9 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify Xiaoming Reader support page
+        run: |
+          curl --fail --location --silent --show-error \
+            --retry 5 --retry-all-errors --retry-delay 2 \
+            https://dev.mk-musician.com/xiaoming-reader/ \
+            | grep --fixed-strings '小铭读书｜支持与隐私政策'
