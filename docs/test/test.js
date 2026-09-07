@@ -23,18 +23,5 @@ document.querySelector('#copy').addEventListener('click', async () => {
     notice.textContent = '请手动复制上面的登记信息，再发给小铭。';
   }
 });
-try {
-  const response = await fetch('./releases.json', { cache: 'no-store' });
-  if (!response.ok) throw new Error('unavailable');
-  const releases = await response.json();
-  for (const id of ['tingxian', 'reader']) {
-    const app = releases[id];
-    if (app?.status !== 'ready') continue;
-    const manifest = new URL(app.manifest);
-    if (manifest.protocol !== 'https:' || manifest.origin !== location.origin || !manifest.pathname.startsWith('/test/packages/')) continue;
-    const link = document.querySelector(`#${id}-install`);
-    link.href = `itms-services://?action=download-manifest&url=${encodeURIComponent(manifest.href)}`;
-    link.hidden = false;
-    document.querySelector(`#${id}-state`).textContent = `测试包已就绪 · ${app.version}（${app.build}）· 仅限已确认登记的设备`;
-  }
-} catch { /* Keep the explicit pending state when release metadata cannot be loaded. */ }
+// Installation links are explicit per friend in HTML. Never replace them
+// from a shared latest-release feed: that could point another friend at the wrong package.
