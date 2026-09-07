@@ -1,0 +1,18 @@
+{
+  "format": "xiaoming-reader-sources",
+  "version": 1,
+  "sources": [
+    {
+      "name": "书海阁",
+      "layout": "catalog-dl-v1",
+      "baseURL": "https://www.shuhaige.net",
+      "readingURL": "https://m.shuhaige.net"
+    },
+    {
+      "name": "速读谷",
+      "layout": "article-module-v1",
+      "baseURL": "https://www.sudugu.cc",
+      "readingURL": "https://www.sudugu.cc"
+    }
+  ]
+}

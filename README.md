@@ -30,3 +30,9 @@ npm run dev
 ```
 
 静态 GitHub Pages 版本位于 `docs/`，完整 React 源码位于 `app/`。
+
+## 外部书源文件下载页
+
+`docs/reader-sources/` 部署到 `/reader-sources/`。页面为静态 HTML，JSON 与页面同域，不依赖 GitHub API、外部字体或脚本。按钮明确是“下载”，当前构建14仍需通过系统文件打开/分享或应用内选择文件完成导入，不声称网页已自动配置。
+
+更新 `sources-v1.json` 后，同步页面文件摘要与更新日期。JSON只存名称、模板、公开网站根地址，不存书籍正文、账户或凭据。GitHub Pages 的本地访问成功不能代替中国大陆线路验证；当前没有大陆可用性保证。
