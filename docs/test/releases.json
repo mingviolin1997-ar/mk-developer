@@ -1,9 +1,9 @@
 {
   "tingxian": {
     "status": "ready",
-    "version": "0.3.1",
-    "build": "9",
-    "manifest": "https://dev.mk-musician.com/test/packages/tingxian-9.plist"
+    "version": "0.3.2",
+    "build": "10",
+    "manifest": "https://dev.mk-musician.com/test/packages/tingxian-10.plist"
   },
   "reader": {
     "status": "ready",
