@@ -21,7 +21,7 @@ const OWNER = "mingviolin1997-ar";
 const API = `https://api.github.com/users/${OWNER}/repos?type=owner&sort=updated&per_page=100`;
 
 const wonderReaderRelease: Repository = {
-  id: -39, name: "Wonder Reader", html_url: "/wonder-reader/",
+  id: -41, name: "Wonder Reader", html_url: "/wonder-reader/",
   description: "Mac 无障碍阅读器，语音阅读、OCR、翻译与总结全部免费。安装包约47.2MB，模型按需下载。适用于 Apple 芯片 Mac，macOS 14 或更新。",
   homepage: null, language: "Swift", topics: ["macos", "accessibility", "local-ai"],
   updated_at: "2026-09-07T20:00:00Z", stargazers_count: 0, fork: false, archived: false, cta_label: "免费下载",
