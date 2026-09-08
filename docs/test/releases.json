@@ -3,12 +3,12 @@
     "status": "ready",
     "version": "0.4.1",
     "build": "12",
-    "manifest": "https://dev.mk-musician.com/test/packages/tingxian-12.plist"
+    "manifest": "https://dev.mk-musician.com/test/packages/friends-tingxian-12.plist"
   },
   "reader": {
     "status": "ready",
     "version": "1.0",
-    "build": "30",
-    "manifest": "https://dev.mk-musician.com/test/packages/reader-30.plist"
+    "build": "32",
+    "manifest": "https://dev.mk-musician.com/test/packages/friends-reader-32.plist"
   }
 }
