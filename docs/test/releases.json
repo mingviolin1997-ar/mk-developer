@@ -1,9 +1,9 @@
 {
   "tingxian": {
     "status": "ready",
-    "version": "0.5.1",
-    "build": "14",
-    "manifest": "https://dev.mk-musician.com/test/packages/friends-tingxian-14-four-friends.plist"
+    "version": "1.1.0",
+    "build": "16",
+    "manifest": "https://dev.mk-musician.com/test/packages/friends-tingxian-16-four-friends.plist"
   },
   "reader": {
     "status": "ready",
