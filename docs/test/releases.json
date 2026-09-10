@@ -7,8 +7,8 @@
   },
   "reader": {
     "status": "ready",
-    "version": "1.0",
-    "build": "39",
-    "manifest": "https://dev.mk-musician.com/test/packages/friends-reader-39-four-friends.plist"
+    "version": "1.0.2",
+    "build": "42",
+    "manifest": "https://dev.mk-musician.com/test/packages/friends-reader-42-four-friends.plist"
   }
 }
