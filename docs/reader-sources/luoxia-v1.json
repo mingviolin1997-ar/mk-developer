@@ -4,14 +4,14 @@
   "sources": [
     {
       "id": "f212f4e3-41ad-5d52-a4fd-fded6d2f852c",
-      "name": "落霞小说（搜索阅读）",
+      "name": "落霞小说",
       "baseURL": "https://www.luoxia123.com",
       "readingURL": "https://www.luoxia123.com",
       "enabled": true,
       "layout": "external-rules-v1",
       "rules": {
         "format": "Legado 3",
-        "name": "落霞小说（搜索阅读）",
+        "name": "落霞小说",
         "sourceURL": "https://www.luoxia123.com",
         "headers": {},
         "searchURL": "/e/search/index.php,{\"method\":\"POST\",\"body\":\"tbname=bookname&show=title,writer&tempid=1&keyboard={{key}}\"}",
@@ -32,6 +32,17 @@
         },
         "content": {
           "content": "#content@html"
+        },
+        "discovery": {
+          "url": "/",
+          "categoryList": ".navbar-nav a[href]",
+          "categoryName": "text",
+          "categoryUrl": "href",
+          "bookList": "table tbody tr:has(td a)",
+          "name": "//td[1]/a/text()",
+          "bookUrl": "//td[1]/a/@href",
+          "author": "//td[2]/text()",
+          "nextPage": "a#lg_nextpage@href"
         }
       }
     }
