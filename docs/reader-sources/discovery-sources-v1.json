@@ -1,0 +1,139 @@
+{
+  "format": "xiaoming-reader-sources",
+  "version": 1,
+  "sources": [
+    {
+      "name": "神话之后",
+      "readingURL": "https://www.shenhuazhihou.com",
+      "baseURL": "https://www.shenhuazhihou.com",
+      "id": "2678d344-3ec4-30b0-56ee-98b5e9702d1e",
+      "layout": "external-rules-v1",
+      "enabled": true,
+      "rules": {
+        "headers": {},
+        "sourceURL": "https://www.shenhuazhihou.com",
+        "name": "神话之后",
+        "toc": {
+          "chapterName": "text",
+          "chapterList": "#play_0 li a",
+          "chapterUrl": "href"
+        },
+        "bookInfo": {
+          "name": "meta[property=\"og:novel:book_name\"]@content",
+          "author": "meta[property=\"og:novel:author\"]@content"
+        },
+        "search": {
+          "name": "h4 a@text",
+          "bookUrl": "a.cover@href",
+          "author": ".author@text",
+          "intro": ".intro@text",
+          "bookList": ".book-coverlist"
+        },
+        "content": {
+          "content": "#chaptercontent p@html"
+        },
+        "format": "Legado 3",
+        "searchURL": "/e/search/index.php,{\"body\":\"tbname=bookname&show=title,writer&tempid=1&keyboard={{key}}\",\"method\":\"POST\"}",
+        "discovery": {
+          "url": "/book/",
+          "categoryList": ".navbar-nav a[href$=\"/book/\"]",
+          "categoryName": "text",
+          "categoryUrl": "href",
+          "bookList": "table tbody tr:has(td a)",
+          "name": "//td[1]/a/text()",
+          "bookUrl": "//td[1]/a/@href",
+          "author": "//td[2]/text()",
+          "nextPage": "a[title=\"下一页\"]@href"
+        }
+      }
+    },
+    {
+      "id": "591534e2-4d4e-5207-ada4-5743e5358c73",
+      "name": "九九藏书",
+      "baseURL": "https://www.sangshixs.com",
+      "readingURL": "https://www.sangshixs.com",
+      "enabled": true,
+      "layout": "external-rules-v1",
+      "rules": {
+        "format": "Legado 3",
+        "name": "九九藏书",
+        "sourceURL": "https://www.sangshixs.com",
+        "headers": {},
+        "searchURL": "/e/search/index.php,{\"method\":\"POST\",\"body\":\"tbname=bookname&show=title,writer&tempid=1&keyboard={{key}}\"}",
+        "search": {
+          "bookList": "tbody tr:has(td a)",
+          "name": "//td[1]/a/text()",
+          "bookUrl": "//td[1]/a/@href",
+          "author": "//td[3]/text()"
+        },
+        "bookInfo": {
+          "name": "meta[property=\"og:novel:book_name\"]@content",
+          "author": "meta[property=\"og:novel:author\"]@content"
+        },
+        "toc": {
+          "chapterList": "#booklist li a",
+          "chapterName": "text",
+          "chapterUrl": "href"
+        },
+        "content": {
+          "content": "#content@html"
+        },
+        "discovery": {
+          "url": "/",
+          "categoryList": ".navbar-nav a[href]",
+          "categoryName": "text",
+          "categoryUrl": "href",
+          "bookList": "table tbody tr:has(td a)",
+          "name": "//td[1]/a/text()",
+          "bookUrl": "//td[1]/a/@href",
+          "author": "//td[2]/text()",
+          "nextPage": "a#lg_nextpage@href"
+        }
+      }
+    },
+    {
+      "id": "f212f4e3-41ad-5d52-a4fd-fded6d2f852c",
+      "name": "落霞小说",
+      "baseURL": "https://www.luoxia123.com",
+      "readingURL": "https://www.luoxia123.com",
+      "enabled": true,
+      "layout": "external-rules-v1",
+      "rules": {
+        "format": "Legado 3",
+        "name": "落霞小说",
+        "sourceURL": "https://www.luoxia123.com",
+        "headers": {},
+        "searchURL": "/e/search/index.php,{\"method\":\"POST\",\"body\":\"tbname=bookname&show=title,writer&tempid=1&keyboard={{key}}\"}",
+        "search": {
+          "bookList": "tbody tr:has(td a)",
+          "name": "//td[1]/a/text()",
+          "bookUrl": "//td[1]/a/@href",
+          "author": "//td[3]/text()"
+        },
+        "bookInfo": {
+          "name": "meta[property=\"og:novel:book_name\"]@content",
+          "author": "meta[property=\"og:novel:author\"]@content"
+        },
+        "toc": {
+          "chapterList": "#booklist li a",
+          "chapterName": "text",
+          "chapterUrl": "href"
+        },
+        "content": {
+          "content": "#content@html"
+        },
+        "discovery": {
+          "url": "/",
+          "categoryList": ".navbar-nav a[href]",
+          "categoryName": "text",
+          "categoryUrl": "href",
+          "bookList": "table tbody tr:has(td a)",
+          "name": "//td[1]/a/text()",
+          "bookUrl": "//td[1]/a/@href",
+          "author": "//td[2]/text()",
+          "nextPage": "a#lg_nextpage@href"
+        }
+      }
+    }
+  ]
+}

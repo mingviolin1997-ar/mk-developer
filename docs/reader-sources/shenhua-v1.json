@@ -1,1 +1,51 @@
-{"version":1,"format":"xiaoming-reader-sources","sources":[{"name":"神话之后（搜索阅读）","readingURL":"https:\/\/www.shenhuazhihou.com","baseURL":"https:\/\/www.shenhuazhihou.com","id":"2678d344-3ec4-30b0-56ee-98b5e9702d1e","layout":"external-rules-v1","enabled":true,"rules":{"headers":{},"sourceURL":"https:\/\/www.shenhuazhihou.com","name":"神话之后（搜索阅读）","toc":{"chapterName":"text","chapterList":"#play_0 li a","chapterUrl":"href"},"bookInfo":{"name":"meta[property=\"og:novel:book_name\"]@content","author":"meta[property=\"og:novel:author\"]@content"},"search":{"name":"h4 a@text","bookUrl":"a.cover@href","author":".author@text","intro":".intro@text","bookList":".book-coverlist"},"content":{"content":"#chaptercontent p@html"},"format":"Legado 3","searchURL":"\/e\/search\/index.php,{\"body\":\"tbname=bookname&show=title,writer&tempid=1&keyboard={{key}}\",\"method\":\"POST\"}"}}]}
+{
+  "version": 1,
+  "format": "xiaoming-reader-sources",
+  "sources": [
+    {
+      "name": "神话之后",
+      "readingURL": "https://www.shenhuazhihou.com",
+      "baseURL": "https://www.shenhuazhihou.com",
+      "id": "2678d344-3ec4-30b0-56ee-98b5e9702d1e",
+      "layout": "external-rules-v1",
+      "enabled": true,
+      "rules": {
+        "headers": {},
+        "sourceURL": "https://www.shenhuazhihou.com",
+        "name": "神话之后",
+        "toc": {
+          "chapterName": "text",
+          "chapterList": "#play_0 li a",
+          "chapterUrl": "href"
+        },
+        "bookInfo": {
+          "name": "meta[property=\"og:novel:book_name\"]@content",
+          "author": "meta[property=\"og:novel:author\"]@content"
+        },
+        "search": {
+          "name": "h4 a@text",
+          "bookUrl": "a.cover@href",
+          "author": ".author@text",
+          "intro": ".intro@text",
+          "bookList": ".book-coverlist"
+        },
+        "content": {
+          "content": "#chaptercontent p@html"
+        },
+        "format": "Legado 3",
+        "searchURL": "/e/search/index.php,{\"body\":\"tbname=bookname&show=title,writer&tempid=1&keyboard={{key}}\",\"method\":\"POST\"}",
+        "discovery": {
+          "url": "/book/",
+          "categoryList": ".navbar-nav a[href$=\"/book/\"]",
+          "categoryName": "text",
+          "categoryUrl": "href",
+          "bookList": "table tbody tr:has(td a)",
+          "name": "//td[1]/a/text()",
+          "bookUrl": "//td[1]/a/@href",
+          "author": "//td[2]/text()",
+          "nextPage": "a[title=\"下一页\"]@href"
+        }
+      }
+    }
+  ]
+}
