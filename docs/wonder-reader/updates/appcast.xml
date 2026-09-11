@@ -1,6 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
 IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
---><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0"><channel><title>Wonder Reader Updates</title><link>https://dev.mk-musician.com/wonder-reader/en/</link><description>Signed updates for Wonder Reader. No newer release is currently offered through this feed.</description><language>en</language></channel></rss><!-- sparkle-signatures:
-edSignature: gA6udnKyet2+mkl6cEX5J/gEfAFvtGesIfnZLqnb64R/sbNRj2/54bVGAPcS/bqem+5gzj/XrI9/Wj/CQ+i4Bg==
-length: 637
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Wonder Reader</title>
+        <item>
+            <title>0.1.8</title>
+            <pubDate>Fri, 11 Sep 2026 16:49:10 -0400</pubDate>
+            <link>https://dev.mk-musician.com/wonder-reader/en/</link>
+            <sparkle:version>44</sparkle:version>
+            <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-reader-v0.1.8-build44/Wonder-Reader-0.1.8-44-arm64.zip" length="48400580" type="application/octet-stream" sparkle:edSignature="fAsRmzowqOueA1jzHxd1hmpgWbsWnwVQCf5g0eMn0VY1/NbwnGko42LcXa2fH1zdWSX/KFuixHNpbi5Q44ZpBA=="></enclosure>
+        </item>
+    </channel>
+</rss><!-- sparkle-signatures:
+edSignature: abwpWJTBzbp2Un7Lgp+o5/oUDiEnYpkzWHUickvvzujYvtVf9eOwZNYL3sek4uENC7egT9p4ZzXeCqRZHG7QAg==
+length: 1247
 -->
