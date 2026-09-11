@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0"><channel><title>Wonder Reader Updates</title><link>https://dev.mk-musician.com/wonder-reader/en/</link><description>Signed updates for Wonder Reader. No newer release is currently offered through this feed.</description><language>en</language></channel></rss><!-- sparkle-signatures:
+edSignature: gA6udnKyet2+mkl6cEX5J/gEfAFvtGesIfnZLqnb64R/sbNRj2/54bVGAPcS/bqem+5gzj/XrI9/Wj/CQ+i4Bg==
+length: 637
+-->
