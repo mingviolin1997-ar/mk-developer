@@ -1,0 +1,39 @@
+{
+  "format": "xiaoming-reader-sources",
+  "version": 1,
+  "sources": [
+    {
+      "id": "591534e2-4d4e-5207-ada4-5743e5358c73",
+      "name": "九九藏书（搜索阅读）",
+      "baseURL": "https://www.sangshixs.com",
+      "readingURL": "https://www.sangshixs.com",
+      "enabled": true,
+      "layout": "external-rules-v1",
+      "rules": {
+        "format": "Legado 3",
+        "name": "九九藏书（搜索阅读）",
+        "sourceURL": "https://www.sangshixs.com",
+        "headers": {},
+        "searchURL": "/e/search/index.php,{\"method\":\"POST\",\"body\":\"tbname=bookname&show=title,writer&tempid=1&keyboard={{key}}\"}",
+        "search": {
+          "bookList": "tbody tr:has(td a)",
+          "name": "//td[1]/a/text()",
+          "bookUrl": "//td[1]/a/@href",
+          "author": "//td[3]/text()"
+        },
+        "bookInfo": {
+          "name": "meta[property=\"og:novel:book_name\"]@content",
+          "author": "meta[property=\"og:novel:author\"]@content"
+        },
+        "toc": {
+          "chapterList": "#booklist li a",
+          "chapterName": "text",
+          "chapterUrl": "href"
+        },
+        "content": {
+          "content": "#content@html"
+        }
+      }
+    }
+  ]
+}
