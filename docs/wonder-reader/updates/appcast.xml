@@ -5,16 +5,16 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         <title>Wonder Reader</title>
         <item>
             <title>0.1.8</title>
-            <pubDate>Fri, 11 Sep 2026 23:30:09 -0400</pubDate>
+            <pubDate>Sat, 12 Sep 2026 01:01:00 -0400</pubDate>
             <link>https://dev.mk-musician.com/wonder-reader/en/</link>
-            <sparkle:version>45</sparkle:version>
+            <sparkle:version>46</sparkle:version>
             <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-reader-v0.1.8-build45/Wonder-Reader-0.1.8-45-arm64.zip" length="51252504" type="application/octet-stream" sparkle:edSignature="zD8fBx0zqFL1ZnCysKUtxoN4V8zHMGDVWy5lfsrerBLBGmZvQtsfTQSQVdUkCLJRB51pqjebQtV/VVwh41oQAQ=="></enclosure>
+            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-reader-v0.1.8-build46/Wonder-Reader-0.1.8-46-arm64.zip" length="51400569" type="application/octet-stream" sparkle:edSignature="Ak3r9BZ/F0SFKXvZ5UqxiAHh3W7MAIov7h9LLhktimCR/cb6T3z70jkNluzgIF2gPUCTAfEdY19Kq3PHShjrAQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 3LS7mgDVcLovWtVRrVI7pMYmuwrj+ZDb2x/VbVD2qUSYytd1iNIQh0kpeY32gV3mbtQV0m/luRgqy4dqOGWEDw==
+edSignature: HtQ6+WHPbVxCYmyor1qkPPhKPHftVIFggnC/aJ2LhJ8qc3CuXJ6NFJACIRkpyHaZF0RAjlTd67f9NJ0at+b9Cw==
 length: 1247
 -->
