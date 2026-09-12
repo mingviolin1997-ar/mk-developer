@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0"><channel><title>OpenTune 测试版更新</title><item><title>OpenTune 1.8.14</title><description>新增应用内检查更新；修复 Logic 返回时的窗口对象崩溃；保存伴奏传输编号。独立软件草稿版，完整 Logic 往返仍待验证；AI 功能需要既有本机模型。</description><sparkle:version>1.8.14</sparkle:version><sparkle:shortVersionString>1.8.14</sparkle:shortVersionString><sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion><sparkle:supportedArchitectures>arm64</sparkle:supportedArchitectures><enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/opentune-accessible-v1.8.14-build1.8.14/OpenTune-Accessible-1.8.14.zip" length="249702050" type="application/octet-stream" sparkle:edSignature="qWQRDcwkeWOQLbafVxeqOT9PwfsZs5OsiFuTe7/NX5CqR1FDQAYSzE+YMlH0jfPGPjSG93QIEz0REbU/SAB5Bw=="></enclosure></item></channel></rss><!-- sparkle-signatures:
+edSignature: +ITRft/ipy6mgw1ZQjUsCCHFRdXOgpYOdkFmCTkwZ5naYK76orm4H++Y09tI74Ct8bd3JIVFwwMGY1aLsfbcBg==
+length: 1278
+-->
