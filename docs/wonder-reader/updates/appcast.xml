@@ -1,20 +1,20 @@
-<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
 IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
 --><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>Wonder Reader</title>
         <item>
             <title>0.1.8</title>
-            <pubDate>Sat, 12 Sep 2026 01:01:00 -0400</pubDate>
+            <pubDate>Sat, 12 Sep 2026 10:08:49 -0400</pubDate>
             <link>https://dev.mk-musician.com/wonder-reader/en/</link>
-            <sparkle:version>46</sparkle:version>
+            <sparkle:version>47</sparkle:version>
             <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-reader-v0.1.8-build46/Wonder-Reader-0.1.8-46-arm64.zip" length="51400569" type="application/octet-stream" sparkle:edSignature="Ak3r9BZ/F0SFKXvZ5UqxiAHh3W7MAIov7h9LLhktimCR/cb6T3z70jkNluzgIF2gPUCTAfEdY19Kq3PHShjrAQ=="></enclosure>
-        </item>
+            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-reader-v0.1.8-build47/Wonder-Reader-0.1.8-47-arm64.zip" length="51395012" type="application/octet-stream" sparkle:edSignature="eqJq8CnWfjRD8N9HgANoWlsTjnf9Zho5A35uBzuswGvqWOGHD4zPEXXdilMr9NVx7jiyybG2dusnH5AKa0boDQ=="></enclosure>
+        <description>&lt;html lang="zh-CN"&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Wonder Reader 更新内容&lt;/h1&gt;&lt;h2&gt;0.1.8（47）&lt;/h2&gt;&lt;p&gt;修复更新助手执行权限，解决已确认的下载后无法运行更新程序的打包缺陷。旧版用户请正常退出软件，解压后将应用拖到“应用程序”替换一次，保留书库和模型。本版没有新增或改变快捷键。&lt;/p&gt;&lt;h2&gt;0.1.8（46）&lt;/h2&gt;&lt;p&gt;新增导入文件名或书内名称显示规则、自定义书名；导出默认名称跟随显示名称。&lt;/p&gt;&lt;h2&gt;0.1.8（45）&lt;/h2&gt;&lt;p&gt;新增手动iCloud历史备份、TXT与Word导出及MOBI导入。&lt;/p&gt;&lt;h2&gt;0.1.8（44）&lt;/h2&gt;&lt;p&gt;改进PDF表单与旋转处理、图片OCR及处理范围和停止操作。&lt;/p&gt;&lt;p&gt;四个更新助手执行权限已核验；修复版后续完整跨版本升级仍待隔离环境验证。保留既有已知限制。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description></item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: HtQ6+WHPbVxCYmyor1qkPPhKPHftVIFggnC/aJ2LhJ8qc3CuXJ6NFJACIRkpyHaZF0RAjlTd67f9NJ0at+b9Cw==
-length: 1247
+edSignature: o1g1lnX929QvcQaoGFL7BnO4m8sQKxicv2x7fdyYRkUjJBOoXM5Pirzkk7LxSmS9JLhAsAMXaH8gt6sFQxfnCw==
+length: 2323
 -->
