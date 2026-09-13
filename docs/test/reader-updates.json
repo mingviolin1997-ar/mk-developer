@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "app": "AccessReader",
+  "channels": {
+    "owner": {
+      "channelID": "owner",
+      "edition": "OwnerTesting",
+      "bundleIdentifier": "com.mingkong.tingshu.personal",
+      "status": "published",
+      "version": "1.0.4",
+      "build": 68,
+      "releaseNotes": [
+        "新增MOBI文件导入，改善EPUB字符实体及正文格式兼容性。",
+        "保留语音包暂停续传、Safari下载及文件安装入口。"
+      ],
+      "upgradeURL": "https://dev.mk-musician.com/test/#ming-kong",
+      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-68.plist"
+    },
+    "friends": {
+      "channelID": "friends",
+      "edition": "FriendFree",
+      "bundleIdentifier": "com.mingkong.tingshu.personal",
+      "status": "published",
+      "version": "1.0.4",
+      "build": 68,
+      "releaseNotes": [
+        "新增MOBI文件导入，改善EPUB字符实体及正文格式兼容性。",
+        "保留语音包暂停续传、Safari下载及文件安装入口。"
+      ],
+      "upgradeURL": "https://dev.mk-musician.com/test/",
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-68-four-friends.plist"
+    }
+  },
+  "entryPoints": {
+    "ming-kong": {
+      "channelID": "owner",
+      "url": "https://dev.mk-musician.com/test/#ming-kong"
+    },
+    "hei-huang": {
+      "channelID": "friends",
+      "url": "https://dev.mk-musician.com/test/#hei-huang"
+    },
+    "lao-yu": {
+      "channelID": "friends",
+      "url": "https://dev.mk-musician.com/test/#lao-yu"
+    },
+    "jia-long": {
+      "channelID": "friends",
+      "url": "https://dev.mk-musician.com/test/#jia-long"
+    },
+    "zongzi": {
+      "channelID": "friends",
+      "url": "https://dev.mk-musician.com/test/#zongzi"
+    }
+  }
+}
