@@ -1,20 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
 IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
 --><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>Wonder Reader</title>
         <item>
             <title>0.1.8</title>
-            <pubDate>Sat, 12 Sep 2026 10:08:49 -0400</pubDate>
+            <pubDate>Sun, 13 Sep 2026 01:24:29 -0400</pubDate>
             <link>https://dev.mk-musician.com/wonder-reader/en/</link>
-            <sparkle:version>47</sparkle:version>
+            <sparkle:version>51</sparkle:version>
             <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-reader-v0.1.8-build47/Wonder-Reader-0.1.8-47-arm64.zip" length="51395012" type="application/octet-stream" sparkle:edSignature="eqJq8CnWfjRD8N9HgANoWlsTjnf9Zho5A35uBzuswGvqWOGHD4zPEXXdilMr9NVx7jiyybG2dusnH5AKa0boDQ=="></enclosure>
-        <description>&lt;html lang="zh-CN"&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Wonder Reader 更新内容&lt;/h1&gt;&lt;h2&gt;0.1.8（47）&lt;/h2&gt;&lt;p&gt;修复更新助手执行权限，解决已确认的下载后无法运行更新程序的打包缺陷。旧版用户请正常退出软件，解压后将应用拖到“应用程序”替换一次，保留书库和模型。本版没有新增或改变快捷键。&lt;/p&gt;&lt;h2&gt;0.1.8（46）&lt;/h2&gt;&lt;p&gt;新增导入文件名或书内名称显示规则、自定义书名；导出默认名称跟随显示名称。&lt;/p&gt;&lt;h2&gt;0.1.8（45）&lt;/h2&gt;&lt;p&gt;新增手动iCloud历史备份、TXT与Word导出及MOBI导入。&lt;/p&gt;&lt;h2&gt;0.1.8（44）&lt;/h2&gt;&lt;p&gt;改进PDF表单与旋转处理、图片OCR及处理范围和停止操作。&lt;/p&gt;&lt;p&gt;四个更新助手执行权限已核验；修复版后续完整跨版本升级仍待隔离环境验证。保留既有已知限制。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description></item>
+            <description sparkle:format="plain-text"><![CDATA[Wonder Reader 0.1.8 (51)
+- 在线试听按钮改为语音设置第一层独立入口，不再与声音菜单一起包在需要互动的控件中。
+Online Preview is now a separate settings-level button instead of sharing the voice-selection wrapper.
+- 新增可选的微软在线多语言语音：在设置→阅读开启，筛选语言与声音，并独立调整语速、音量和音调。本版免费，无需语音下载、模型或账号。联网时朗读文字发送至微软；服务可用性取决于网络及提供方。
+Added optional Microsoft online voices in Settings → Reading, with language filtering and separate rate, volume and pitch. Free in this release; no voice download, model or account required. Text is sent to Microsoft; availability depends on your connection and the provider.
+- 在线朗读逐步预缓存约30分钟真实音频，最多3个并发请求；32MB磁盘缓存自动清理旧文件，设置可手动清理。已缓存部分可断网继续听；切换语言保留短暂停顿。
+Online reading gradually buffers about 30 minutes of real audio with at most three requests. The 32 MB disk cache removes old audio automatically and can be cleared in Settings. Cached audio remains available offline; language switches retain a short pause.
+- 内置朗读新增不同的轻柔换段、换章纸张提示音，可分别试听，沿用导航提示音开关及音量。
+Built-in narration adds distinct quiet paper sounds for paragraphs and chapters, with previews and existing navigation sound controls.
+- 新增当前书籍原文全文关键词搜索，结果显示匹配句子上下文。
+Search the full original text of the current book, with matching sentence previews.
+- 搜索结果每页显示最多1000项，可切换上一页、下一页，结果编号跨页连续。
+Browse 1000 search results per page using Previous and Next, with continuous result numbers.
+- 每次启动后台检查更新；无新版时保持安静，有新版时显示升级提示和新特性，忙碌或已有弹窗时协调显示。
+Check for updates in the background on every launch. Show release notes only when a newer compatible version is available; wait while reading tasks or other dialogs are active.
+- Command-F：打开当前书籍原文搜索。
+Command-F: Search the current book’s original text.
+- Return：在选中搜索结果后关闭搜索窗口并定位到原文。
+Return: Jump to the selected result and close search.
+- Escape：关闭搜索窗口。
+Escape: Close search.
+- K：播放或暂停当前引擎；J/L：上/下一句，保持原播放状态。
+K: Play or pause the current engine; J/L: Previous/next sentence, preserving playback state.
+- /：在线朗读时报告后续连续缓存时长；原有处理任务进度汇报仍保留。
+/: Report contiguous audio buffered ahead during online reading, alongside existing task progress.
+
+Wonder Reader 0.1.8 (47)
+- 修复更新助手执行权限，解决下载后无法运行更新程序的打包缺陷。受旧版更新故障影响的用户可手动覆盖安装，保留书库与模型。
+Fixed missing executable permissions on update helpers. Affected users can manually replace the app while keeping their library and models.
+
+Wonder Reader 0.1.8 (46)
+- 新增导入文件名或书内名称显示规则及自定义书名，导出默认名称跟随显示名称。
+Added filename or original-title display and custom book names, also used for suggested export filenames.
+
+Wonder Reader 0.1.8 (45)
+- 新增手动iCloud历史备份、TXT与Word导出及MOBI导入。
+Added manual iCloud backup snapshots, TXT and Word export, and MOBI import.
+
+Wonder Reader 0.1.8 (44)
+- 改进PDF表单与旋转处理、图片OCR、处理范围选择和停止操作。
+Improved PDF forms and rotation, image OCR, processing scope selection, and cancellation.
+]]></description>
+            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-reader-v0.1.8-build51/Wonder-Reader-0.1.8-51-arm64.zip" length="51848526" type="application/octet-stream" sparkle:edSignature="N9GJ+DUDRbYNsgdoqnZkM36rKpnHFfxZvs6H/VleRrh1DeKKj4SQzG5SMlmjp3mA2iQclHHPZmSviaW8qrglBA=="></enclosure>
+        </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: o1g1lnX929QvcQaoGFL7BnO4m8sQKxicv2x7fdyYRkUjJBOoXM5Pirzkk7LxSmS9JLhAsAMXaH8gt6sFQxfnCw==
-length: 2323
+edSignature: 4F1j2HrxTy+bGjmdFaj1BFSw8uhOwlXAY2S/fZ1QQpZDxhJuV/mHHDxkOtHAEOKDgkpEvJcs4EmTE6ugjuxbDA==
+length: 5173
 -->
