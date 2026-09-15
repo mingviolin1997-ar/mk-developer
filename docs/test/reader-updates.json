@@ -7,30 +7,32 @@
       "edition": "OwnerTesting",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.5",
-      "build": 73,
+      "version": "1.0.6",
+      "build": 80,
       "releaseNotes": [
-        "阅读与在线 AI 语音免费开放，新增14个中文音色及即时试听，无需下载模型。",
-        "长按播放可开启背景音乐；启动检查已发布新版，有更新才显示升级说明。",
-        "保留MOBI导入及EPUB兼容修复。升级清理旧语音模型与下载残留，保留书籍和进度。"
+        "改善目录浏览与旁白焦点响应，优化快速切换章节时的表现。",
+        "完善换源开始、成功和失败的反馈，保留原有阅读进度。",
+        "整理语音设置，修复在线音色选择与免费试听入口。",
+        "精简重复标题和控件提示，修正迷你播放器状态描述。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/#ming-kong",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-73.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-80.plist"
     },
     "friends": {
       "channelID": "friends",
       "edition": "FriendFree",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.5",
-      "build": 73,
+      "version": "1.0.6",
+      "build": 80,
       "releaseNotes": [
-        "阅读与在线 AI 语音免费开放，新增14个中文音色及即时试听，无需下载模型。",
-        "长按播放可开启背景音乐；启动检查已发布新版，有更新才显示升级说明。",
-        "保留MOBI导入及EPUB兼容修复。升级清理旧语音模型与下载残留，保留书籍和进度。"
+        "改善目录浏览与旁白焦点响应，优化快速切换章节时的表现。",
+        "完善换源开始、成功和失败的反馈，保留原有阅读进度。",
+        "整理语音设置，修复在线音色选择与免费试听入口。",
+        "精简重复标题和控件提示，修正迷你播放器状态描述。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-73-four-friends.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-80-four-friends.plist"
     }
   },
   "entryPoints": {
