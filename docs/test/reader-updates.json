@@ -8,15 +8,14 @@
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
       "version": "1.0.6",
-      "build": 80,
+      "build": 85,
       "releaseNotes": [
-        "改善目录浏览与旁白焦点响应，优化快速切换章节时的表现。",
-        "完善换源开始、成功和失败的反馈，保留原有阅读进度。",
-        "整理语音设置，修复在线音色选择与免费试听入口。",
-        "精简重复标题和控件提示，修正迷你播放器状态描述。"
+        "优化发现页布局，常用操作横向排列，浏览内容更清晰。",
+        "新增部分设置的旁白上下滑动调节，操作更便捷。",
+        "改进阅读与语音设置的交互，修复若干已知问题。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/#ming-kong",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-80.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-85.plist"
     },
     "friends": {
       "channelID": "friends",
@@ -24,15 +23,14 @@
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
       "version": "1.0.6",
-      "build": 80,
+      "build": 85,
       "releaseNotes": [
-        "改善目录浏览与旁白焦点响应，优化快速切换章节时的表现。",
-        "完善换源开始、成功和失败的反馈，保留原有阅读进度。",
-        "整理语音设置，修复在线音色选择与免费试听入口。",
-        "精简重复标题和控件提示，修正迷你播放器状态描述。"
+        "优化发现页布局，常用操作横向排列，浏览内容更清晰。",
+        "新增部分设置的旁白上下滑动调节，操作更便捷。",
+        "改进阅读与语音设置的交互，修复若干已知问题。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-80-four-friends.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-85-four-friends.plist"
     }
   },
   "entryPoints": {
