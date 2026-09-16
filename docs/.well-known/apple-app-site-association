@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "88RX7BM6LG.com.mingkong.tingshu.personal"
+        ],
+        "components": [
+          {
+            "/": "/reader-book/",
+            "comment": "Book metadata links only"
+          }
+        ]
+      }
+    ]
+  }
+}
