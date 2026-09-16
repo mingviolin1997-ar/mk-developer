@@ -7,30 +7,32 @@
       "edition": "OwnerTesting",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.6",
-      "build": 85,
+      "version": "1.0.7",
+      "build": 91,
       "releaseNotes": [
-        "优化发现页布局，常用操作横向排列，浏览内容更清晰。",
-        "新增部分设置的旁白上下滑动调节，操作更便捷。",
-        "改进阅读与语音设置的交互，修复若干已知问题。"
+        "新增本地电子书文件分享和在线书籍链接分享。",
+        "书架新增全部、在线、本地筛选，下载后保留原条目和阅读进度。",
+        "在线语音新增句间停顿选项，默认保留原始语音效果。",
+        "修复部分 EPUB 书名、章节标题及开头朗读异常。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/#ming-kong",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-85.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-91.plist"
     },
     "friends": {
       "channelID": "friends",
       "edition": "FriendFree",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.6",
-      "build": 85,
+      "version": "1.0.7",
+      "build": 91,
       "releaseNotes": [
-        "优化发现页布局，常用操作横向排列，浏览内容更清晰。",
-        "新增部分设置的旁白上下滑动调节，操作更便捷。",
-        "改进阅读与语音设置的交互，修复若干已知问题。"
+        "新增本地电子书文件分享和在线书籍链接分享。",
+        "书架新增全部、在线、本地筛选，下载后保留原条目和阅读进度。",
+        "在线语音新增句间停顿选项，默认保留原始语音效果。",
+        "修复部分 EPUB 书名、章节标题及开头朗读异常。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-85-four-friends.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-91-four-friends.plist"
     }
   },
   "entryPoints": {
