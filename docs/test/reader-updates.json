@@ -7,32 +7,32 @@
       "edition": "OwnerTesting",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.7",
-      "build": 91,
+      "version": "1.0.8",
+      "build": 95,
       "releaseNotes": [
-        "新增本地电子书文件分享和在线书籍链接分享。",
-        "书架新增全部、在线、本地筛选，下载后保留原条目和阅读进度。",
-        "在线语音新增句间停顿选项，默认保留原始语音效果。",
-        "修复部分 EPUB 书名、章节标题及开头朗读异常。"
+        "新增 ZIP 文档合并导入，可将压缩包内分散的章节整理为一本书。",
+        "扩展常见阅读书源的规则与脚本兼容，改进原站分类、列表分页和章节读取。",
+        "新增书源配置更新检查，查看当前版本、最新版本及维护者更新说明，确认后应用；保留原有账号、启停状态和阅读数据。",
+        "修复分卷目录、网页元素集合和部分规则解析问题，改进导入与阅读稳定性。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/#ming-kong",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-91.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-95.plist"
     },
     "friends": {
       "channelID": "friends",
       "edition": "FriendFree",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.7",
-      "build": 91,
+      "version": "1.0.8",
+      "build": 95,
       "releaseNotes": [
-        "新增本地电子书文件分享和在线书籍链接分享。",
-        "书架新增全部、在线、本地筛选，下载后保留原条目和阅读进度。",
-        "在线语音新增句间停顿选项，默认保留原始语音效果。",
-        "修复部分 EPUB 书名、章节标题及开头朗读异常。"
+        "新增 ZIP 文档合并导入，可将压缩包内分散的章节整理为一本书。",
+        "扩展常见阅读书源的规则与脚本兼容，改进原站分类、列表分页和章节读取。",
+        "新增书源配置更新检查，查看当前版本、最新版本及维护者更新说明，确认后应用；保留原有账号、启停状态和阅读数据。",
+        "修复分卷目录、网页元素集合和部分规则解析问题，改进导入与阅读稳定性。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-91-four-friends.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-95-five-friends.plist"
     }
   },
   "entryPoints": {
@@ -55,6 +55,10 @@
     "zongzi": {
       "channelID": "friends",
       "url": "https://dev.mk-musician.com/test/#zongzi"
+    },
+    "zhen-qing": {
+      "channelID": "friends",
+      "url": "https://dev.mk-musician.com/test/#zhen-qing"
     }
   }
 }
