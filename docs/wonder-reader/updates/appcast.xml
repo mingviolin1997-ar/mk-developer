@@ -5,13 +5,30 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         <title>Wonder Reader</title>
         <item>
             <title>0.1.8</title>
-            <pubDate>Tue, 15 Sep 2026 17:37:15 -0400</pubDate>
+            <pubDate>Wed, 16 Sep 2026 23:04:13 -0400</pubDate>
             <link>https://dev.mk-musician.com/wonder-reader/en/</link>
-            <sparkle:version>52</sparkle:version>
+            <sparkle:version>56</sparkle:version>
             <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="plain-text"><![CDATA[Wonder Reader 0.1.8 (52)
+            <description sparkle:format="plain-text"><![CDATA[Wonder Reader 0.1.8 (56)
+- 新增Codex在线助读：浏览器登录ChatGPT账号后，可在设置和AI助读中选择账号支持的模型与思考深度，进行翻译、OCR及总结。本地和在线选项按所选模式显示。所选内容发送OpenAI，使用账号额度。
+Added Codex online assistance: sign in to ChatGPT in your browser, then choose an available model and reasoning level in Settings or AI Assistance for translation, OCR and summaries. Local and online controls follow the selected mode. Selected content is sent to OpenAI using your account allowance.
+- 新增“导出原文件”，按导入格式恢复书库保存的原件，保留原始字节；TXT和Word仍导出当前阅读内容。
+Added Export original file to restore the original retained in the library without changing its bytes or format. TXT and Word continue to export current reading content.
+- 修复在线翻译将 nineteenth、thirty-seven 等文字数字译为19、37时被错误拦截；保留漏数、错号和重复数字检查。已使用真实Codex连接验证短文翻译、总结及表格图片OCR。
+Fixed numeric validation rejecting equivalent written-out numbers in translations. Missing literals, signs and unsupported repeated numbers remain checked. Short translation, summary and table-image OCR verified through the real Codex connection.
+- 设置窗口中Command-W只关闭设置，保留当前书籍和任务；主窗口中仍关闭书籍并保留窗口。
+Command-W in Settings closes Settings only, keeping the book and tasks. In the main window it closes the book and keeps the window.
+- 通用设置新增默认开启的音效总开关；不影响朗读或旁白。启动时不再播报模型已就绪，真实模型错误显示提示窗口。
+General settings now include a sound-effects switch, enabled by default. Narration and VoiceOver are unaffected. Startup model-ready announcements are removed; actual model errors show a dialog.
+- 微软在线语音新增默认折叠的停顿详细设置，可分别设置标点、句尾、换行和空行。默认原音，可选10–1000毫秒；在预缓存中保守调整可检测的末尾静音，实际间隔仍受音频和网络影响。
+Online Microsoft speech adds collapsed pause settings for punctuation, sentence ends, line breaks and blank lines. Original audio remains default; 10–1000 ms choices conservatively adjust detectable trailing silence during prebuffering. Actual gaps also depend on audio and network timing.
+- 精简在线翻译请求，保留模型和思考深度选择；短文实测未确认速度提升，不宣称固定提速。
+Online translation requests are shorter without changing model or reasoning choices. Short-text timings do not establish a speed improvement.
+- Command-W：取代Command-Esc；关闭当前辅助窗口，在阅读主窗口中关闭当前书籍并保留软件窗口。Command-Q仍退出。 / Replaces Command-Esc: close the current auxiliary window, or close the book while keeping the main reader window. Command-Q still quits.
+
+Wonder Reader 0.1.8 (52)
 - 修复导出外语文档时混入软件生成的图片提示。TXT略过图片，保留原文图注及已识别文字。
 Fixed reader-generated image notices appearing in exported documents. TXT omits images while retaining original captions and recognized text.
 - Word导出保留实际图片；PDF图片从原文件读取，避免导出灰色占位。已有图片描述保留为替代文本，不插入正文。
@@ -40,15 +57,11 @@ Fixed missing executable permissions on update helpers. Affected users can manua
 Wonder Reader 0.1.8 (46)
 - 新增导入文件名或书内名称显示规则及自定义书名，导出默认名称跟随显示名称。
 Added filename or original-title display and custom book names, also used for suggested export filenames.
-
-Wonder Reader 0.1.8 (45)
-- 新增手动iCloud历史备份、TXT与Word导出及MOBI导入。
-Added manual iCloud backup snapshots, TXT and Word export, and MOBI import.
 ]]></description>
-            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-reader-v0.1.8-build52/Wonder-Reader-0.1.8-52-arm64.zip" length="51589594" type="application/octet-stream" sparkle:edSignature="mFUk1EV85d2ZDwgyAVs8Zf2ndK8RmVhDoTbE6iMDG1vtc4O6La4HemJr2pgtwFzGsIRXMhE9kJICgZiLPPz8Aw=="></enclosure>
+            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-reader-v0.1.8-build56/Wonder-Reader-0.1.8-56-arm64.zip" length="51749255" type="application/octet-stream" sparkle:edSignature="iQNmi8i6dRavz4QU8DhNdxd+9fyJ9vRC9YZibv8oCQVLeVFOCAgk3F3ur7rJxsXWlDz8fvYjaEN2RtuP/IDlDA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: PTwBxhDTFBRKSRGHDd9erzSM/XO8DrpiJ/sx0hLGIQjNZDb0lQkD1tMs6sgHnnOBgYEvtIgJgcYP21fpyN/fCA==
-length: 4925
+edSignature: 1+ZKKWsp/dQvGmuvCtLjzqaxn7X3eWFOam5G/CKUlhKKctRMZ0rcglhU+2qhbJTvioI86gZ00mSYP8RyarvPDg==
+length: 7813
 -->
