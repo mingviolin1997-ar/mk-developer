@@ -1,0 +1,70 @@
+{
+  "format": "accessreader-source-status",
+  "version": 1,
+  "checkedAt": "2026-09-17T02:51:40.653027+00:00",
+  "scheduledIntervalMinutes": 30,
+  "scheduleMayBeDelayed": true,
+  "scope": "配置版本检测，不代表网站可读性；原始脚本不执行，不自动替换已验证配置。",
+  "upstreams": [
+    {
+      "id": "legado-xiu2",
+      "name": "Legado公开格式样本（XIU2）",
+      "mode": "monitor-only",
+      "checkedAt": "2026-09-17T02:51:39.535767+00:00",
+      "status": "checked",
+      "lastSuccess": {
+        "sourceCount": 22,
+        "sha256": "00644eda44f0fcabcfc015a024480376638d5e7a381a2010aeedfca5aa797845",
+        "checkedAt": "2026-09-17T02:51:39.535767+00:00",
+        "url": "https://raw.githubusercontent.com/XIU2/Yuedu/master/shuyuan"
+      },
+      "changedSincePreviousCheck": false
+    },
+    {
+      "id": "dahuilang",
+      "name": "大灰狼",
+      "mode": "version-api",
+      "checkedAt": "2026-09-17T02:51:39.535970+00:00",
+      "status": "checked",
+      "lastSuccess": {
+        "version": "5.9.5",
+        "notes": "修复源阅登录问题",
+        "checkedAt": "2026-09-17T02:51:39.535970+00:00",
+        "url": "https://api.langge.cf/version"
+      },
+      "changedSincePreviousCheck": false
+    }
+  ],
+  "maintainedFiles": [
+    {
+      "file": "sources-v1.json",
+      "sha256": "368c2cd229bbbc55dd63a9352c973bc0f7c2d37777523a7ce823e7da91712a27",
+      "sourceCount": 2,
+      "maintenance": "developer-maintained; no separate upstream URL"
+    },
+    {
+      "file": "shenhua-v1.json",
+      "sha256": "f95d80c37fe1dda7e2ea0221fd82b793d9d89cb2ce34c9fe986a6ccb06fe65a9",
+      "sourceCount": 1,
+      "maintenance": "developer-maintained; no separate upstream URL"
+    },
+    {
+      "file": "sangshi-v1.json",
+      "sha256": "87955704f4f6550bd4725ffa823a2a647feebcf12ab1e3102ca411b25c85df6a",
+      "sourceCount": 1,
+      "maintenance": "developer-maintained; no separate upstream URL"
+    },
+    {
+      "file": "luoxia-v1.json",
+      "sha256": "e7d40876de1d5311d54c587c98adb1cd9765d3eda9cd8bfca3365797401fc6c0",
+      "sourceCount": 1,
+      "maintenance": "developer-maintained; no separate upstream URL"
+    },
+    {
+      "file": "discovery-sources-v1.json",
+      "sha256": "f983bf00e3bf93c558f391b7112f140820bb0786143bf640d55e833abf5f5e67",
+      "sourceCount": 3,
+      "maintenance": "developer-maintained; no separate upstream URL"
+    }
+  ]
+}

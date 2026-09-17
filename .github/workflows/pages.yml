@@ -5,7 +5,7 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "17,47 * * * *"
 
 permissions:
   contents: read
@@ -24,6 +24,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Test source update checks
+        run: python3 scripts/test_reader_sources.py
+      - name: Check original source releases
+        run: python3 scripts/check_reader_sources.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
