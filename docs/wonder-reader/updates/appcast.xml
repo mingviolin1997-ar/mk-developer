@@ -5,13 +5,21 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         <title>Wonder Reader</title>
         <item>
             <title>0.1.8</title>
-            <pubDate>Tue, 22 Sep 2026 12:05:59 -0400</pubDate>
+            <pubDate>Fri, 25 Sep 2026 16:55:42 -0400</pubDate>
             <link>https://dev.mk-musician.com/wonder-reader/en/</link>
-            <sparkle:version>65</sparkle:version>
+            <sparkle:version>66</sparkle:version>
             <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="plain-text"><![CDATA[Wonder Reader 0.1.8 (65)
+            <description sparkle:format="plain-text"><![CDATA[Wonder Reader 0.1.8 (66)
+- 修复章首图片和章节拼接额外添加空行。
+Fixed extra blank lines before opening images and between document sections.
+- 改善EPUB、HTML和Word导入：保留显式诗歌换行、空段和预格式缩进，段落间不再强加空行。
+Improved EPUB, HTML and Word imports to retain explicit poetry line breaks, empty paragraphs and preformatted indentation without adding blank lines between paragraphs.
+- 保留已有书籍、书签和处理结果。新导入规则需重新导入书籍才能应用；不自动改写旧书。
+Existing books, bookmarks and results are preserved. Reimport a book to apply the new import rules; saved books are not rewritten automatically.
+
+Wonder Reader 0.1.8 (65)
 - 提高微软在线朗读源音频码率至96kbps，新旧音质缓存分离。
 Improved Microsoft online speech to 96 kbps, with separate caching for the improved audio.
 - 改善本地自动声音选择：优先高音质自然声音，保留手动选择；开始朗读时刷新已安装声音。
@@ -64,27 +72,11 @@ Wonder Reader 0.1.8 (52)
 Fixed reader-generated image notices appearing in exported documents. TXT omits images while retaining original captions and recognized text.
 - Word导出保留实际图片；PDF图片从原文件读取，避免导出灰色占位。已有图片描述保留为替代文本，不插入正文。
 Word exports retain real images, resolving PDF images from the source instead of exporting placeholders. Existing image descriptions remain alt text, outside the body.
-
-Wonder Reader 0.1.8 (51)
-- 在线试听按钮改为语音设置第一层独立入口，不再与声音菜单一起包在需要互动的控件中。
-Online Preview is now a separate settings-level button instead of sharing the voice-selection wrapper.
-- 新增可选的微软在线多语言语音：在设置→阅读开启，筛选语言与声音，并独立调整语速、音量和音调。本版免费，无需语音下载、模型或账号。联网时朗读文字发送至微软；服务可用性取决于网络及提供方。
-Added optional Microsoft online voices in Settings → Reading, with language filtering and separate rate, volume and pitch. Free in this release; no voice download, model or account required. Text is sent to Microsoft; availability depends on your connection and the provider.
-- 在线朗读逐步预缓存约30分钟真实音频，最多3个并发请求；32MB磁盘缓存自动清理旧文件，设置可手动清理。已缓存部分可断网继续听；切换语言保留短暂停顿。
-Online reading gradually buffers about 30 minutes of real audio with at most three requests. The 32 MB disk cache removes old audio automatically and can be cleared in Settings. Cached audio remains available offline; language switches retain a short pause.
-- 内置朗读新增不同的轻柔换段、换章纸张提示音，可分别试听，沿用导航提示音开关及音量。
-Built-in narration adds distinct quiet paper sounds for paragraphs and chapters, with previews and existing navigation sound controls.
-- 新增当前书籍原文全文关键词搜索，结果显示匹配句子上下文。
-Search the full original text of the current book, with matching sentence previews.
-- 搜索结果每页显示最多1000项，可切换上一页、下一页，结果编号跨页连续。
-Browse 1000 search results per page using Previous and Next, with continuous result numbers.
-- 每次启动后台检查更新；无新版时保持安静，有新版时显示升级提示和新特性，忙碌或已有弹窗时协调显示。
-Check for updates in the background on every launch. Show release notes only when a newer compatible version is available; wait while reading tasks or other dialogs are active.
 ]]></description>
-            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-reader-v0.1.8-build65/Wonder-Reader-0.1.8-65-arm64.zip" length="51878897" type="application/octet-stream" sparkle:edSignature="US0ZsqNocMqC5YY60RkOSJjLKkrWzR69OOYaQqdaYGc4nmW3iGFyJQQch5VObTOUmBLTGG44bW0beYoRi/CAAQ=="></enclosure>
+            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-reader-v0.1.8-build66/Wonder-Reader-0.1.8-66-arm64.zip" length="51878607" type="application/octet-stream" sparkle:edSignature="INg4CBlmChrND7jAegqrHnOlciZ35xvAJPCDiaZ45QLvG41Bh6xxUNvviSKBWZe8A07pI2lH0ftggt2PRVwFDw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: Gs/r0pAhyoORxHI5qSht0+IAzE1xc7nwyaKddiEN1OElXo/9Yb9WzOIxCOS8tPVftjCQOlD0iZLna4BTjvwzDg==
-length: 11330
+edSignature: BlTv5Dbk6t+IothyJK3HpxR41dsTlvgVftNgPI9xeEYo1O+vPhKpFGuhKdDiLOJBMrQE3gUewnLUSZkt6e3TAg==
+length: 9814
 -->
