@@ -7,32 +7,34 @@
       "edition": "OwnerTesting",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.12",
-      "build": 149,
+      "version": "1.0.13",
+      "build": 150,
       "releaseNotes": [
-        "新增视听页面，支持外部接口导入的听书、视频和漫画，收藏并保存播放进度。",
-        "支持导入本地音视频和 ZIP 专辑，增加 FLAC、APE 等常见格式兼容播放。",
-        "优化视频全屏、连续播放和暂停恢复，修复清空历史后旧进度恢复的问题。",
-        "改善部分 EPUB 导入兼容性，优化在线语音缓存开关及管理。"
+        "修复带图EPUB导入、目录定位和章节名重复朗读。图片不做文字识别，朗读仅提示“图片”，展开原文可显示原图。",
+        "完善外部接口的 HTTPS 账号登录，以及听书、短剧和漫画入口。",
+        "完善外部音视频、ZIP专辑导入及播放定位，保留FLAC、APE兼容播放。",
+        "统一阅读与媒体的播放、暂停、停止和跳转控制，改善视频全屏与资源释放。",
+        "已有EPUB需重新导入才能应用新的目录和图片规则；部分上游资源不可用，APE定位存在精度限制。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/#ming-kong",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-149.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-150.plist"
     },
     "friends": {
       "channelID": "friends",
       "edition": "FriendFree",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.12",
-      "build": 149,
+      "version": "1.0.13",
+      "build": 150,
       "releaseNotes": [
-        "新增视听页面，支持外部接口导入的听书、视频和漫画，收藏并保存播放进度。",
-        "支持导入本地音视频和 ZIP 专辑，增加 FLAC、APE 等常见格式兼容播放。",
-        "优化视频全屏、连续播放和暂停恢复，修复清空历史后旧进度恢复的问题。",
-        "改善部分 EPUB 导入兼容性，优化在线语音缓存开关及管理。"
+        "修复带图EPUB导入、目录定位和章节名重复朗读。图片不做文字识别，朗读仅提示“图片”，展开原文可显示原图。",
+        "完善外部接口的 HTTPS 账号登录，以及听书、短剧和漫画入口。",
+        "完善外部音视频、ZIP专辑导入及播放定位，保留FLAC、APE兼容播放。",
+        "统一阅读与媒体的播放、暂停、停止和跳转控制，改善视频全屏与资源释放。",
+        "已有EPUB需重新导入才能应用新的目录和图片规则；部分上游资源不可用，APE定位存在精度限制。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-149-five-friends.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-150-five-friends.plist"
     }
   },
   "entryPoints": {
