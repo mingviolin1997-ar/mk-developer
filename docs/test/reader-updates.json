@@ -7,34 +7,34 @@
       "edition": "OwnerTesting",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.13",
-      "build": 150,
+      "version": "1.0.14",
+      "build": 151,
       "releaseNotes": [
-        "修复带图EPUB导入、目录定位和章节名重复朗读。图片不做文字识别，朗读仅提示“图片”，展开原文可显示原图。",
-        "完善外部接口的 HTTPS 账号登录，以及听书、短剧和漫画入口。",
-        "完善外部音视频、ZIP专辑导入及播放定位，保留FLAC、APE兼容播放。",
-        "统一阅读与媒体的播放、暂停、停止和跳转控制，改善视频全屏与资源释放。",
-        "已有EPUB需重新导入才能应用新的目录和图片规则；部分上游资源不可用，APE定位存在精度限制。"
+        "修复#话题#等成对井号的朗读转换，完善自定义发音的原文和替代文字输入。",
+        "完善视听类型与网站选择操作，仅按有依据的原站类别显示；固定录制内容不再提供无效的多角色选择。",
+        "逐书记住目录排序，打开书架收藏、作品和目录时后台检查更新，保留手动刷新。",
+        "改善下一集预缓冲，修复部分短剧和漫画的作品身份、目录加载与重试；增强缓存清除和失败播放的状态保护。",
+        "修正升级入口的应用和分发渠道校验。酷我、部分番茄短剧及部分网站原分类仍有已记录限制；真实旁白手势和手机耗电仍需实机验证。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/#ming-kong",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-150.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-151.plist"
     },
     "friends": {
       "channelID": "friends",
       "edition": "FriendFree",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.13",
-      "build": 150,
+      "version": "1.0.14",
+      "build": 151,
       "releaseNotes": [
-        "修复带图EPUB导入、目录定位和章节名重复朗读。图片不做文字识别，朗读仅提示“图片”，展开原文可显示原图。",
-        "完善外部接口的 HTTPS 账号登录，以及听书、短剧和漫画入口。",
-        "完善外部音视频、ZIP专辑导入及播放定位，保留FLAC、APE兼容播放。",
-        "统一阅读与媒体的播放、暂停、停止和跳转控制，改善视频全屏与资源释放。",
-        "已有EPUB需重新导入才能应用新的目录和图片规则；部分上游资源不可用，APE定位存在精度限制。"
+        "修复#话题#等成对井号的朗读转换，完善自定义发音的原文和替代文字输入。",
+        "完善视听类型与网站选择操作，仅按有依据的原站类别显示；固定录制内容不再提供无效的多角色选择。",
+        "逐书记住目录排序，打开书架收藏、作品和目录时后台检查更新，保留手动刷新。",
+        "改善下一集预缓冲，修复部分短剧和漫画的作品身份、目录加载与重试；增强缓存清除和失败播放的状态保护。",
+        "修正升级入口的应用和分发渠道校验。酷我、部分番茄短剧及部分网站原分类仍有已记录限制；真实旁白手势和手机耗电仍需实机验证。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-150-five-friends.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-151-five-friends.plist"
     }
   },
   "entryPoints": {
