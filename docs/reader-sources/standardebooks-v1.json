@@ -1,0 +1,51 @@
+{
+  "format": "xiaoming-reader-sources",
+  "version": 1,
+  "sources": [
+    {
+      "id": "a0dc109d-bfbc-4ef3-8e5b-cd4ec61dbdc6",
+      "name": "Standard Ebooks（英文经典）",
+      "baseURL": "https://standardebooks.org",
+      "readingURL": "https://standardebooks.org",
+      "enabled": true,
+      "layout": "external-rules-v1",
+      "rules": {
+        "format": "Legado 3",
+        "name": "Standard Ebooks（英文经典）",
+        "sourceURL": "https://standardebooks.org",
+        "headers": {},
+        "searchURL": "/ebooks?query={{key}}",
+        "search": {
+          "bookList": "li[typeof=\"schema:Book\"]",
+          "name": "p:first-of-type > a > span[property=\"schema:name\"]@text",
+          "bookUrl": "p:first-of-type > a@href",
+          "author": "p.author@text"
+        },
+        "bookInfo": {
+          "name": "h1[property=\"schema:name\"]@text",
+          "author": "a[property=\"schema:author\"] span[property=\"schema:name\"]@text",
+          "tocUrl": "#read-online a.list@href"
+        },
+        "toc": {
+          "chapterList": "#toc a:not([href$=\"titlepage\"]):not([href$=\"imprint\"]):not([href$=\"frontispiece\"]):not([href$=\"loi\"]):not([href$=\"colophon\"]):not([href$=\"uncopyright\"])",
+          "chapterName": "text",
+          "chapterUrl": "href"
+        },
+        "content": {
+          "content": "main@html"
+        },
+        "discovery": {
+          "url": "/ebooks",
+          "categoryList": "select[name=\"tags[]\"] option",
+          "categoryName": "text",
+          "categoryUrl": ":root@value##^(.+)$##/ebooks?tags%5B%5D=$1",
+          "bookList": "li[typeof=\"schema:Book\"]",
+          "name": "p:first-of-type > a > span[property=\"schema:name\"]@text",
+          "bookUrl": "p:first-of-type > a@href",
+          "author": "p.author@text",
+          "nextPage": "a[rel=\"next\"]@href"
+        }
+      }
+    }
+  ]
+}

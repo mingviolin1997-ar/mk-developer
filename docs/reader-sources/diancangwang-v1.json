@@ -1,0 +1,50 @@
+{
+  "format": "xiaoming-reader-sources",
+  "version": 1,
+  "sources": [
+    {
+      "id": "d85277ae-26c9-5e5a-988f-5d84c1b8b5d1",
+      "name": "中华典藏网",
+      "baseURL": "https://www.diancangwang.cn",
+      "readingURL": "https://www.diancangwang.cn",
+      "enabled": true,
+      "layout": "external-rules-v1",
+      "rules": {
+        "format": "Legado 3",
+        "name": "中华典藏网",
+        "sourceURL": "https://www.diancangwang.cn",
+        "headers": {},
+        "searchURL": "/dianji_search/{{key}}/",
+        "search": {
+          "bookList": ".table_book .tab_text:has(h3 a)",
+          "name": "h3 a@text",
+          "bookUrl": "h3 a@href",
+          "author": ".zuozhe a@text"
+        },
+        "bookInfo": {
+          "name": "h1@text",
+          "author": ".hd .zuozhe a@text"
+        },
+        "toc": {
+          "chapterList": "#booklist li a",
+          "chapterName": "text",
+          "chapterUrl": "href"
+        },
+        "content": {
+          "content": ".panel_body@html##<span[^>]*style=\"display:none\"[^>]*>[^<]*</span>"
+        },
+        "discovery": {
+          "url": "/",
+          "categoryList": ".mod-menu li a",
+          "categoryName": "text",
+          "categoryUrl": "href",
+          "bookList": ".table_book .tab_text:has(h3 a)",
+          "name": "h3 a@text",
+          "bookUrl": "h3 a@href",
+          "author": ".zuozhe a@text",
+          "nextPage": ".page a:contains(下一页)@href"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format": "xiaoming-reader-sources",
+  "version": 1,
+  "sources": [
+    {
+      "name": "速读谷",
+      "layout": "article-module-v1",
+      "baseURL": "https://www.sudugu.cc",
+      "readingURL": "https://www.sudugu.cc"
+    }
+  ]
+}

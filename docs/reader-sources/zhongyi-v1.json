@@ -1,0 +1,50 @@
+{
+  "format": "xiaoming-reader-sources",
+  "version": 1,
+  "sources": [
+    {
+      "id": "05f2b253-3daf-5293-8110-69b27e145189",
+      "name": "中意小说网",
+      "baseURL": "https://www.zhongyi6.com",
+      "readingURL": "https://www.zhongyi6.com",
+      "enabled": true,
+      "layout": "external-rules-v1",
+      "rules": {
+        "format": "Legado 3",
+        "name": "中意小说网",
+        "sourceURL": "https://www.zhongyi6.com",
+        "headers": {},
+        "searchURL": "/books/search?keyword={{key}}",
+        "search": {
+          "bookList": "li.clearfix2:has(h5 a)",
+          "name": "h5 a@text",
+          "bookUrl": "h5 a@href",
+          "author": ".text_m@text"
+        },
+        "bookInfo": {
+          "name": "//*[@id=\"name\"]/text()",
+          "tocUrl": "a:contains(查看目录)@href"
+        },
+        "toc": {
+          "chapterList": "#chapterDirectory li a",
+          "chapterName": "text",
+          "chapterUrl": "href"
+        },
+        "content": {
+          "content": "#body@html"
+        },
+        "discovery": {
+          "url": "/books/all",
+          "categoryList": "#catalog a",
+          "categoryName": "text",
+          "categoryUrl": "href",
+          "bookList": "li.clearfix2:has(h5 a)",
+          "name": "h5 a@text",
+          "bookUrl": "h5 a@href",
+          "author": ".text_m@text",
+          "nextPage": "//ul[@class=\"pagination\"]//a[text()=\"›\"]/@href"
+        }
+      }
+    }
+  ]
+}

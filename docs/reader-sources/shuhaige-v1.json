@@ -1,0 +1,12 @@
+{
+  "format": "xiaoming-reader-sources",
+  "version": 1,
+  "sources": [
+    {
+      "name": "书海阁",
+      "layout": "catalog-dl-v1",
+      "baseURL": "https://www.shuhaige.net",
+      "readingURL": "https://m.shuhaige.net"
+    }
+  ]
+}

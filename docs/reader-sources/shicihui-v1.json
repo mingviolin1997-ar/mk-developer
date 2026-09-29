@@ -1,0 +1,49 @@
+{
+  "format": "xiaoming-reader-sources",
+  "version": 1,
+  "sources": [
+    {
+      "id": "5fa2eb90-4b2b-5c12-98fe-bc3e214610dc",
+      "name": "诗词汇",
+      "baseURL": "https://www.shicihui.com",
+      "readingURL": "https://www.shicihui.com",
+      "enabled": true,
+      "layout": "external-rules-v1",
+      "rules": {
+        "format": "Legado 3",
+        "name": "诗词汇",
+        "sourceURL": "https://www.shicihui.com",
+        "headers": {},
+        "searchURL": "/search/book?q={{key}}",
+        "search": {
+          "bookList": ".search-result-list li",
+          "name": ".list-item-title@text",
+          "bookUrl": "a@href",
+          "author": ".list-item-tag@text##\\s*·.*"
+        },
+        "bookInfo": {
+          "name": "h1.card-hero-title@text",
+          "author": ".card-hero-meta span:first-child@text"
+        },
+        "toc": {
+          "chapterList": ".toc-list a",
+          "chapterName": "text",
+          "chapterUrl": "href"
+        },
+        "content": {
+          "content": "#chapter-text@html"
+        },
+        "discovery": {
+          "url": "/books",
+          "categoryList": "a.card[href^=\"/books/\"]",
+          "categoryName": ".card-title@text",
+          "categoryUrl": "href",
+          "bookList": "#book-grid a.card",
+          "name": "//div[contains(@class,\"card-title\")]/text()",
+          "bookUrl": "href",
+          "nextPage": ".pagination .active + a@href"
+        }
+      }
+    }
+  ]
+}

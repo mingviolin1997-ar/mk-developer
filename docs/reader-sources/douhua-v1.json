@@ -1,0 +1,50 @@
+{
+  "format": "xiaoming-reader-sources",
+  "version": 1,
+  "sources": [
+    {
+      "id": "045e4706-62bf-5ba8-ac54-8dcd12b238c9",
+      "name": "豆花文学",
+      "baseURL": "https://www.douhuawenxue.com",
+      "readingURL": "https://www.douhuawenxue.com",
+      "enabled": true,
+      "layout": "external-rules-v1",
+      "rules": {
+        "format": "Legado 3",
+        "name": "豆花文学",
+        "sourceURL": "https://www.douhuawenxue.com",
+        "headers": {},
+        "searchURL": "/search?kd={{key}}",
+        "search": {
+          "bookList": ".book-base",
+          "name": "h3 a@text",
+          "bookUrl": "h3 a@href",
+          "author": ".book_author@text"
+        },
+        "bookInfo": {
+          "name": "meta[property=\"og:novel:book_name\"]@content",
+          "author": "meta[property=\"og:novel:author\"]@content"
+        },
+        "toc": {
+          "chapterList": ".list-inline-3 .list_item a",
+          "chapterName": "text",
+          "chapterUrl": "href"
+        },
+        "content": {
+          "content": "#J_chapterContent p@html"
+        },
+        "discovery": {
+          "url": "/category",
+          "categoryList": ".category-group:has(.category-group_hd:matches(^分类$)) a, .category-group:has(.category-group_hd:matches(^更多分类$)) a",
+          "categoryName": "text",
+          "categoryUrl": "href",
+          "bookList": ".book-base",
+          "name": "h3 a@text",
+          "bookUrl": "h3 a@href",
+          "author": ".book_author@text",
+          "nextPage": "a:has(.icon-next-2)@href"
+        }
+      }
+    }
+  ]
+}
