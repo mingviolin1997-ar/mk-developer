@@ -1,8 +1,8 @@
 {
   "reader": {
-    "version": "1.0.14",
-    "build": "151",
+    "version": "1.0.16",
+    "build": "153",
     "edition": "OwnerTesting",
-    "manifest": "https://dev.mk-musician.com/test/packages/ming-kong-reader-151.plist"
+    "manifest": "https://dev.mk-musician.com/test/packages/ming-kong-reader-153.plist"
   }
 }

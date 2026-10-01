@@ -7,34 +7,32 @@
       "edition": "OwnerTesting",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.14",
-      "build": 151,
+      "version": "1.0.16",
+      "build": 153,
       "releaseNotes": [
-        "修复#话题#等成对井号的朗读转换，完善自定义发音的原文和替代文字输入。",
-        "完善视听类型与网站选择操作，仅按有依据的原站类别显示；固定录制内容不再提供无效的多角色选择。",
-        "逐书记住目录排序，打开书架收藏、作品和目录时后台检查更新，保留手动刷新。",
-        "改善下一集预缓冲，修复部分短剧和漫画的作品身份、目录加载与重试；增强缓存清除和失败播放的状态保护。",
-        "修正升级入口的应用和分发渠道校验。酷我、部分番茄短剧及部分网站原分类仍有已记录限制；真实旁白手势和手机耗电仍需实机验证。"
+        "番茄短剧接入官网播放器，保留统一的三键或五键播放操作。",
+        "完善短剧暂停、跳转、切集和续播，退出时停止播放，重试保持正确集数。",
+        "补充 OGV 视频导入识别，使用已有兼容引擎播放原文件。",
+        "部分资源在原网站本身仍无法播放，本次更新未解决这些资源的编码或服务问题。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/#ming-kong",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-151.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-153.plist"
     },
     "friends": {
       "channelID": "friends",
       "edition": "FriendFree",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.14",
-      "build": 151,
+      "version": "1.0.16",
+      "build": 153,
       "releaseNotes": [
-        "修复#话题#等成对井号的朗读转换，完善自定义发音的原文和替代文字输入。",
-        "完善视听类型与网站选择操作，仅按有依据的原站类别显示；固定录制内容不再提供无效的多角色选择。",
-        "逐书记住目录排序，打开书架收藏、作品和目录时后台检查更新，保留手动刷新。",
-        "改善下一集预缓冲，修复部分短剧和漫画的作品身份、目录加载与重试；增强缓存清除和失败播放的状态保护。",
-        "修正升级入口的应用和分发渠道校验。酷我、部分番茄短剧及部分网站原分类仍有已记录限制；真实旁白手势和手机耗电仍需实机验证。"
+        "番茄短剧接入官网播放器，保留统一的三键或五键播放操作。",
+        "完善短剧暂停、跳转、切集和续播，退出时停止播放，重试保持正确集数。",
+        "补充 OGV 视频导入识别，使用已有兼容引擎播放原文件。",
+        "部分资源在原网站本身仍无法播放，本次更新未解决这些资源的编码或服务问题。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-151-five-friends.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-153-five-friends.plist"
     }
   },
   "entryPoints": {
