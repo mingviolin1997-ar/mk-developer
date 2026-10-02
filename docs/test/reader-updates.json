@@ -7,32 +7,30 @@
       "edition": "OwnerTesting",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.17",
-      "build": 154,
+      "version": "1.0.18",
+      "build": 155,
       "releaseNotes": [
-        "统一东方书房界面，采用纸墨配色、宋体书目和简洁图标。",
-        "自定义发音按每本书单独保存，可从书架操作或阅读页设置，不影响其他书籍。",
-        "新增真实翻书和书本轻响音效，默认开启，可在设置中关闭、调节音量和试听。",
-        "改善小说列表加载和空白信息显示，补充部分目录返回的兼容处理。"
+        "丰富自然音效，加入更多翻页、书本、木质轻扣等声音，同类操作也有自然变化。",
+        "音效设置移至“设置→界面与显示”，保留开关、独立音量和试听。",
+        "逐书自定义发音仅保留在“当前书籍播放页→设置”中，规则仍按每本书独立保存。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/#ming-kong",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-154.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-155.plist"
     },
     "friends": {
       "channelID": "friends",
       "edition": "FriendFree",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.17",
-      "build": 154,
+      "version": "1.0.18",
+      "build": 155,
       "releaseNotes": [
-        "统一东方书房界面，采用纸墨配色、宋体书目和简洁图标。",
-        "自定义发音按每本书单独保存，可从书架操作或阅读页设置，不影响其他书籍。",
-        "新增真实翻书和书本轻响音效，默认开启，可在设置中关闭、调节音量和试听。",
-        "改善小说列表加载和空白信息显示，补充部分目录返回的兼容处理。"
+        "丰富自然音效，加入更多翻页、书本、木质轻扣等声音，同类操作也有自然变化。",
+        "音效设置移至“设置→界面与显示”，保留开关、独立音量和试听。",
+        "逐书自定义发音仅保留在“当前书籍播放页→设置”中，规则仍按每本书独立保存。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-154-five-friends.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-155-five-friends.plist"
     }
   },
   "entryPoints": {
