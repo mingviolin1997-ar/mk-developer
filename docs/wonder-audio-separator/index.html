@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Wonder 音频分离 · Mac 免费下载</title>
+  <meta name="description" content="Wonder 音频分离，为 Apple 芯片 Mac 提供人声与伴奏分离，支持键盘、VoiceOver、GPU 加速，内置卡拉 OK 模型。">
+  <link rel="canonical" href="https://dev.mk-musician.com/wonder-audio-separator/">
+  <style>
+    :root{color-scheme:light dark;--bg:#f7f5ef;--fg:#182c27;--muted:#52645c;--panel:#fffef9;--accent:#145e45}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.7 system-ui,-apple-system,sans-serif}
+    header,main,footer{max-width:820px;margin:auto;padding:24px}
+    header{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    nav a{display:inline-block;padding:8px 4px}
+    h1{font-size:clamp(36px,7vw,56px);line-height:1.2}
+    h2{font-size:26px;line-height:1.4}
+    a{color:var(--accent);text-underline-offset:4px;overflow-wrap:anywhere}
+    section{margin:32px 0;padding:24px;background:var(--panel);border-radius:12px}
+    .meta{color:var(--muted)}
+    .button{display:inline-block;padding:14px 24px;background:var(--accent);color:white;border-radius:6px;font-weight:700;text-decoration:none;min-height:48px}
+    :focus-visible{outline:3px solid #b26300;outline-offset:4px}
+    li{margin:10px 0}
+    code{overflow-wrap:anywhere;font-size:14px}
+    .skip{position:absolute;top:-80px}
+    .skip:focus{top:0;background:var(--panel);padding:12px;z-index:1}
+    footer{font-size:16px}
+    @media(prefers-color-scheme:dark){:root{--bg:#111c18;--fg:#edf3ee;--muted:#b1c3b7;--panel:#1c2b23;--accent:#9bdfba}.button{color:#10291c}}
+    @media(max-width:480px){header,main,footer{padding:18px}section{padding:20px}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要内容</a>
+  <header>
+    <strong>MK · Mac 软件</strong>
+    <nav aria-label="页面导航"><a href="#download">下载与安装</a></nav>
+  </header>
+  <main id="main">
+    <h1>Wonder 音频分离</h1>
+    <p>从音频中分离人声与伴奏，为音乐练习和伴奏制作提供清晰、可访问的操作体验。</p>
+    <p class="meta">0.2.0 · 构建 14 · 免费测试版</p>
+
+    <section id="download" aria-labelledby="download-heading" data-release-state="verified" data-installer-bytes="553043829" data-installer-sha256="910a8e34ce2c617a1c8a9ce353adad1c93e455e0f896639a18983ef5881113d0" data-signing-status="verified" data-notarization-status="accepted">
+      <h2 id="download-heading">下载与安装</h2>
+      <p><strong>适用于 Apple 芯片 Mac（M1 或更新），需要 macOS 14 或更新版本。不支持 Intel Mac。</strong></p>
+      <p><a class="button" href="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-audio-separator-v0.2.0-build14/Wonder-Audio-Separator-0.2.0-build14-arm64.dmg">免费下载 Wonder 音频分离（DMG）</a></p>
+      <ol>
+        <li>下载并打开 DMG 安装盘。</li>
+        <li>将安装盘里的“Wonder 音频分离.app”复制到访达的“应用程序”文件夹。</li>
+        <li>从“应用程序”打开 Wonder 音频分离，选择音频并开始处理。</li>
+      </ol>
+      <p>更新已有安装前，请先正常退出旧版应用。</p>
+      <p>安装盘约 553 MB。Developer ID 签名、Apple 公证及票据验证通过。</p>
+      <p>SHA-256：<code>910a8e34ce2c617a1c8a9ce353adad1c93e455e0f896639a18983ef5881113d0</code></p>
+    </section>
+
+    <section aria-labelledby="features-heading">
+      <h2 id="features-heading">音频分离与无障碍操作</h2>
+      <ul>
+        <li>内置卡拉 OK 模型，首次打开自动准备，无需另装 Python。</li>
+        <li>支持 Apple 芯片的 GPU 加速。</li>
+        <li>可以按需要启用 TTA 处理；启用后处理时间会增加。</li>
+        <li>支持键盘操作与 VoiceOver，便于选择文件、调整设置和了解处理状态。</li>
+      </ul>
+    </section>
+
+  </main>
+  <footer><a href="/">返回开发者主页</a></footer>
+</body>
+</html>

@@ -20,6 +20,13 @@ type Repository = {
 const OWNER = "mingviolin1997-ar";
 const API = `https://api.github.com/users/${OWNER}/repos?type=owner&sort=updated&per_page=100`;
 
+const wonderAudioSeparatorRelease: Repository = {
+  id: -1402, name: "Wonder 音频分离", html_url: "/wonder-audio-separator/",
+  description: "免费的人声与伴奏分离工具，默认卡拉 OK 模式，支持 GPU 加速、TTA、键盘和 VoiceOver，内置卡拉 OK 模型。适用于 Apple 芯片 Mac，macOS 14 或更新。",
+  homepage: null, language: "Swift", topics: ["macos", "accessibility", "audio"],
+  updated_at: "2026-10-02T00:00:00Z", stargazers_count: 0, fork: false, archived: false, cta_label: "免费下载",
+};
+
 const wonderReaderRelease: Repository = {
   id: -41, name: "Wonder Reader", html_url: "/wonder-reader/",
   description: "Mac 无障碍阅读器，语音阅读、OCR、翻译与总结全部免费。安装包约47.2MB，模型按需下载。适用于 Apple 芯片 Mac，macOS 14 或更新。",
@@ -96,7 +103,7 @@ function ProjectCard({ repo, featured = false }: { repo: Repository; featured?: 
 }
 
 export default function Home() {
-  const [repos, setRepos] = useState<Repository[]>([wonderReaderRelease, wonderGPTRelease, featuredFallback]);
+  const [repos, setRepos] = useState<Repository[]>([wonderAudioSeparatorRelease, wonderReaderRelease, wonderGPTRelease, featuredFallback]);
   const [status, setStatus] = useState<"loading" | "live" | "fallback">("loading");
   const [filter, setFilter] = useState("全部");
 
@@ -108,11 +115,11 @@ export default function Home() {
       })
       .then((data: Repository[]) => {
         const visible = data.filter((repo) => !repo.fork && !repo.archived && repo.name !== "mk-developer");
-        setRepos([wonderReaderRelease, wonderGPTRelease, ...(visible.length ? visible : [featuredFallback])]);
+        setRepos([wonderAudioSeparatorRelease, wonderReaderRelease, wonderGPTRelease, ...(visible.length ? visible : [featuredFallback])]);
         setStatus("live");
       })
       .catch(() => {
-        setRepos([wonderReaderRelease, wonderGPTRelease, featuredFallback]);
+        setRepos([wonderAudioSeparatorRelease, wonderReaderRelease, wonderGPTRelease, featuredFallback]);
         setStatus("fallback");
       });
   }, []);
