@@ -7,32 +7,32 @@
       "edition": "OwnerTesting",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.16",
-      "build": 153,
+      "version": "1.0.17",
+      "build": 154,
       "releaseNotes": [
-        "番茄短剧接入官网播放器，保留统一的三键或五键播放操作。",
-        "完善短剧暂停、跳转、切集和续播，退出时停止播放，重试保持正确集数。",
-        "补充 OGV 视频导入识别，使用已有兼容引擎播放原文件。",
-        "部分资源在原网站本身仍无法播放，本次更新未解决这些资源的编码或服务问题。"
+        "统一东方书房界面，采用纸墨配色、宋体书目和简洁图标。",
+        "自定义发音按每本书单独保存，可从书架操作或阅读页设置，不影响其他书籍。",
+        "新增真实翻书和书本轻响音效，默认开启，可在设置中关闭、调节音量和试听。",
+        "改善小说列表加载和空白信息显示，补充部分目录返回的兼容处理。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/#ming-kong",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-153.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-154.plist"
     },
     "friends": {
       "channelID": "friends",
       "edition": "FriendFree",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.16",
-      "build": 153,
+      "version": "1.0.17",
+      "build": 154,
       "releaseNotes": [
-        "番茄短剧接入官网播放器，保留统一的三键或五键播放操作。",
-        "完善短剧暂停、跳转、切集和续播，退出时停止播放，重试保持正确集数。",
-        "补充 OGV 视频导入识别，使用已有兼容引擎播放原文件。",
-        "部分资源在原网站本身仍无法播放，本次更新未解决这些资源的编码或服务问题。"
+        "统一东方书房界面，采用纸墨配色、宋体书目和简洁图标。",
+        "自定义发音按每本书单独保存，可从书架操作或阅读页设置，不影响其他书籍。",
+        "新增真实翻书和书本轻响音效，默认开启，可在设置中关闭、调节音量和试听。",
+        "改善小说列表加载和空白信息显示，补充部分目录返回的兼容处理。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-153-five-friends.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-154-five-friends.plist"
     }
   },
   "entryPoints": {

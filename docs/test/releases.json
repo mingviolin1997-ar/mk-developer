@@ -7,8 +7,8 @@
   },
   "reader": {
     "status": "ready",
-    "version": "1.0.16",
-    "build": "153",
-    "manifest": "https://dev.mk-musician.com/test/packages/friends-reader-153-five-friends.plist"
+    "version": "1.0.17",
+    "build": "154",
+    "manifest": "https://dev.mk-musician.com/test/packages/friends-reader-154-five-friends.plist"
   }
 }
