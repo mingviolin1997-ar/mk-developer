@@ -7,30 +7,32 @@
       "edition": "OwnerTesting",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.18",
-      "build": 155,
+      "version": "1.0.19",
+      "build": 156,
       "releaseNotes": [
-        "丰富自然音效，加入更多翻页、书本、木质轻扣等声音，同类操作也有自然变化。",
-        "音效设置移至“设置→界面与显示”，保留开关、独立音量和试听。",
-        "逐书自定义发音仅保留在“当前书籍播放页→设置”中，规则仍按每本书独立保存。"
+        "改善小说正文加载与自动续章，短暂连接失败时保留当前书籍和章节进行有限恢复。",
+        "番茄发现页提供原站分类入口，按原有类别进入书单。",
+        "书源管理提供账号登录、内部网站检测和聚合书源更新三个明确入口。",
+        "系统声音版本标记更清楚，保留手动选择的音色、语速和音量。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/#ming-kong",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-155.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-156.plist"
     },
     "friends": {
       "channelID": "friends",
       "edition": "FriendFree",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.18",
-      "build": 155,
+      "version": "1.0.19",
+      "build": 156,
       "releaseNotes": [
-        "丰富自然音效，加入更多翻页、书本、木质轻扣等声音，同类操作也有自然变化。",
-        "音效设置移至“设置→界面与显示”，保留开关、独立音量和试听。",
-        "逐书自定义发音仅保留在“当前书籍播放页→设置”中，规则仍按每本书独立保存。"
+        "改善小说正文加载与自动续章，短暂连接失败时保留当前书籍和章节进行有限恢复。",
+        "番茄发现页提供原站分类入口，按原有类别进入书单。",
+        "书源管理提供账号登录、内部网站检测和聚合书源更新三个明确入口。",
+        "系统声音版本标记更清楚，保留手动选择的音色、语速和音量。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-155-five-friends.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-156-five-friends.plist"
     }
   },
   "entryPoints": {
