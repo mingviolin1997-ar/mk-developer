@@ -7,32 +7,30 @@
       "edition": "OwnerTesting",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.19",
-      "build": 156,
+      "version": "1.0.20",
+      "build": 157,
       "releaseNotes": [
-        "改善小说正文加载与自动续章，短暂连接失败时保留当前书籍和章节进行有限恢复。",
-        "番茄发现页提供原站分类入口，按原有类别进入书单。",
-        "书源管理提供账号登录、内部网站检测和聚合书源更新三个明确入口。",
-        "系统声音版本标记更清楚，保留手动选择的音色、语速和音量。"
+        "修复部分 EPUB 导入失败的问题，提升文档兼容性。",
+        "改善封面、图文混排、纯图页及 SVG 图片显示；单张图片异常不再阻止整本书导入。",
+        "保留正文、章节顺序及图片位置，提升阅读稳定性。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/#ming-kong",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-156.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-157.plist"
     },
     "friends": {
       "channelID": "friends",
       "edition": "FriendFree",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.19",
-      "build": 156,
+      "version": "1.0.20",
+      "build": 157,
       "releaseNotes": [
-        "改善小说正文加载与自动续章，短暂连接失败时保留当前书籍和章节进行有限恢复。",
-        "番茄发现页提供原站分类入口，按原有类别进入书单。",
-        "书源管理提供账号登录、内部网站检测和聚合书源更新三个明确入口。",
-        "系统声音版本标记更清楚，保留手动选择的音色、语速和音量。"
+        "修复部分 EPUB 导入失败的问题，提升文档兼容性。",
+        "改善封面、图文混排、纯图页及 SVG 图片显示；单张图片异常不再阻止整本书导入。",
+        "保留正文、章节顺序及图片位置，提升阅读稳定性。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-156-five-friends.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-157-five-friends.plist"
     }
   },
   "entryPoints": {
