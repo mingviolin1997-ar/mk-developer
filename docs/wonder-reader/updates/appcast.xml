@@ -5,13 +5,27 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         <title>Wonder Reader</title>
         <item>
             <title>0.1.8</title>
-            <pubDate>Fri, 25 Sep 2026 16:55:42 -0400</pubDate>
+            <pubDate>Mon, 12 Oct 2026 20:43:58 -0400</pubDate>
             <link>https://dev.mk-musician.com/wonder-reader/en/</link>
-            <sparkle:version>66</sparkle:version>
+            <sparkle:version>67</sparkle:version>
             <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="plain-text"><![CDATA[Wonder Reader 0.1.8 (66)
+            <description sparkle:format="plain-text"><![CDATA[Wonder Reader 0.1.8 (67)
+- 新增可选 PaddleOCR 本地文档识别，支持中英日及拉丁字母语言，并保留图片、表格行列和合并单元格。设置中一键下载约1GB模型；软件自带运行组件，无需安装Python。首次安装或升级需准备引擎，可查询阶段。
+Added optional local PaddleOCR for Chinese, English, Japanese and Latin-script languages, with images and accessible table cells. Download approximately 1 GB of models in Settings; no separate Python installation is needed. Initial setup or upgrades prepare the engine and report that stage.
+- 修复PDF分页、图片附近向上逐行阅读时位置被回写的问题，保留系统原生文字导航，不更改旁白设置。
+Fixed reading positions being moved forward again near PDF page and image boundaries, retaining native text navigation without changing VoiceOver settings.
+- 翻译不再先等待模型生成整本书术语表；改用书籍内已有译文和术语记忆，严格区分书籍、来源版本和目标语言。优化等价日期检查与受损扫描字符处理。
+Translation no longer waits for a separate glossary-generation request. Book-specific translation and terminology memory is isolated by source version and target language, with improved equivalent-date validation and handling of damaged scan characters.
+- 翻译、OCR和总结使用各自流程。在线短文总结减少分段请求；只有当前任务成功完成才保存结果，明确选择的OCR引擎失败时不再用另一引擎冒充成功。Codex登录和模型选择保留。
+Translation, OCR and summaries use separate workflows. Short online summaries need fewer requests, and results require successful completion of the current task. Explicit OCR choices no longer silently fall back to another engine. Codex sign-in and model choices are preserved.
+- 修复微软在线朗读连接失败，保留原有语音设置。更新保留书库、模型、书签和阅读记录。
+Fixed Microsoft online speech connection failures while preserving voice settings. Updates retain books, models, bookmarks and reading history.
+- 本地小模型的专业译名和复杂内容仍需核对；PaddleOCR不支持所有语言和任意复杂版面。
+Specialist names and complex local-model output still need review. PaddleOCR does not cover every language or document layout.
+
+Wonder Reader 0.1.8 (66)
 - 修复章首图片和章节拼接额外添加空行。
 Fixed extra blank lines before opening images and between document sections.
 - 改善EPUB、HTML和Word导入：保留显式诗歌换行、空段和预格式缩进，段落间不再强加空行。
@@ -66,17 +80,11 @@ General settings now include a sound-effects switch, enabled by default. Narrati
 Online Microsoft speech adds collapsed pause settings for punctuation, sentence ends, line breaks and blank lines. Original audio remains default; 10–1000 ms choices conservatively adjust detectable trailing silence during prebuffering. Actual gaps also depend on audio and network timing.
 - 精简在线翻译请求，保留模型和思考深度选择；短文实测未确认速度提升，不宣称固定提速。
 Online translation requests are shorter without changing model or reasoning choices. Short-text timings do not establish a speed improvement.
-
-Wonder Reader 0.1.8 (52)
-- 修复导出外语文档时混入软件生成的图片提示。TXT略过图片，保留原文图注及已识别文字。
-Fixed reader-generated image notices appearing in exported documents. TXT omits images while retaining original captions and recognized text.
-- Word导出保留实际图片；PDF图片从原文件读取，避免导出灰色占位。已有图片描述保留为替代文本，不插入正文。
-Word exports retain real images, resolving PDF images from the source instead of exporting placeholders. Existing image descriptions remain alt text, outside the body.
 ]]></description>
-            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-reader-v0.1.8-build66/Wonder-Reader-0.1.8-66-arm64.zip" length="51878607" type="application/octet-stream" sparkle:edSignature="INg4CBlmChrND7jAegqrHnOlciZ35xvAJPCDiaZ45QLvG41Bh6xxUNvviSKBWZe8A07pI2lH0ftggt2PRVwFDw=="></enclosure>
+            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-reader-v0.1.8-build67/Wonder-Reader-0.1.8-67-arm64.zip" length="354167922" type="application/octet-stream" sparkle:edSignature="HtbZH/Yde01+/kwuSJpblLbiyc8LUjkuc4GeDcvtc9gV/271nYtAaYi9kDSoQPu6acN7USdMBQ8uBlhLko6QBg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: BlTv5Dbk6t+IothyJK3HpxR41dsTlvgVftNgPI9xeEYo1O+vPhKpFGuhKdDiLOJBMrQE3gUewnLUSZkt6e3TAg==
-length: 9814
+edSignature: xB6TcT1VmeSZAs0Fo9CaoP7JfpLbSOuoz9E8DhQEXz/UvFCSJ79+hJGdaYE9/lHTyogliC7G6Wu/tge34VEKDQ==
+length: 11581
 -->
