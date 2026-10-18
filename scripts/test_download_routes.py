@@ -1,5 +1,6 @@
 """Release routing must never change the app, device edition, or fallback bytes."""
 import hashlib
+import http.client
 import io
 import importlib.util
 import pathlib
@@ -83,6 +84,25 @@ class DownloadRouteTests(unittest.TestCase):
         routed = plistlib.loads((self.packages / 'friend-7.plist').read_bytes())
         self.assertTrue(routed['items'][0]['assets'][0]['url'].endswith('/friend-8.ipa'))
         self.assertEqual(routed['items'][0]['metadata']['bundle-version'], '8')
+
+    def test_truncated_chunked_response_falls_back_without_blocking_publish(self):
+        class Socket:
+            def makefile(self, *args, **kwargs):
+                return io.BytesIO(b'HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\n\r\n10\r\nabc')
+        def interrupted_response(*args, **kwargs):
+            response = http.client.HTTPResponse(Socket())
+            response.begin()
+            return response
+        cache = pathlib.Path(self.tmp.name) / 'cache'
+        result = self.build(lambda path, commit: MODULE.verify_package(
+            path, commit, cache, opener=interrupted_response))
+        self.assertEqual(result['accelerated'], [])
+        self.assertEqual(len(result['direct']), 2)
+        self.assertTrue((self.site / 'test/download-routes.json').is_file())
+        self.assertEqual(list(cache.glob('*.json')), [])
+        for role, raw in self.originals.items():
+            self.assertEqual((self.packages / f'{role}-7.plist').read_bytes(), raw)
+        self.assertEqual((self.site / 'test/index.html').read_text(), self.page)
 
     def test_external_or_traversal_package_is_rejected_before_any_publish_write(self):
         for url in ('https://attacker.invalid/a.ipa', ORIGIN + '/test/packages/../../private.ipa'):

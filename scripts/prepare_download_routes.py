@@ -4,6 +4,7 @@ import argparse
 import datetime
 import hashlib
 import html
+import http.client
 from html.parser import HTMLParser
 import json
 import pathlib
@@ -157,7 +158,7 @@ def prepare_site(site, commit, verify):
         try:
             pinned = verify(package, commit)
             url = package_url(package.name, pinned)
-        except (OSError, ValueError) as error:
+        except (OSError, ValueError, http.client.HTTPException) as error:
             result['direct'].append({'manifest': source.name, 'reason': str(error)})
             continue
         asset['url'] = url
