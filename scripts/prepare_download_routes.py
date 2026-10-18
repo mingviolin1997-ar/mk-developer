@@ -182,8 +182,10 @@ def prepare_site(site, commit, verify):
         fallback = f'{ORIGIN}/test/direct/{source.name}'
         href = 'itms-services://?action=download-manifest&url=' + urllib.parse.quote(fallback, safe='')
         identity = html.escape(attrs.get('id', source.stem) + '-original', quote=True)
-        return (match.group() + f'<p class="meta"><a id="{identity}" href="{html.escape(href, quote=True)}" '
-                f'aria-label="{html.escape(label + '，原线路备用安装', quote=True)}">原线路备用安装</a></p>')
+        return (match.group() + '<details class="meta download-help">'
+                f'<summary aria-label="{html.escape(label + '，下载遇到问题？', quote=True)}">下载遇到问题？</summary>'
+                f'<p><a id="{identity}" href="{html.escape(href, quote=True)}" '
+                f'aria-label="{html.escape(label + '，原线路备用安装', quote=True)}">使用备用线路安装</a></p></details>')
 
     if ready:
         page_path.write_text(ANCHOR.sub(add_original, page))
