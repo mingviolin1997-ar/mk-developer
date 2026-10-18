@@ -10,5 +10,11 @@
     "version": "1.0.22",
     "build": "159",
     "manifest": "https://dev.mk-musician.com/test/packages/friends-reader-159-five-friends.plist"
+  },
+  "voplus": {
+    "status": "ready",
+    "version": "1.0.0",
+    "build": "29",
+    "manifest": "https://dev.mk-musician.com/test/packages/friends-voplus-29-five-friends.plist"
   }
 }
