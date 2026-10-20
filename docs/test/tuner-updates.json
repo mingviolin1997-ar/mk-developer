@@ -7,14 +7,17 @@
       "edition": "FriendFree",
       "bundleIdentifier": "com.mingkong.tingxian",
       "status": "published",
-      "version": "1.1.5",
-      "build": 24,
+      "version": "1.1.6",
+      "build": 25,
       "minimumOSVersion": "17.0",
       "releaseNotes": [
-        "记住上次选择的乐器或普通模式，重新打开时恢复并保持暂停。"
+        "新增视觉调音指针，关闭语音也能看音准。",
+        "设置自动保存，重启后继续使用。",
+        "优化界面布局、配色和高对比显示。",
+        "启动时后台检查新版，有可用更新时提示。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-tingxian-24-five-friends.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-tingxian-25-five-friends.plist"
     }
   }
 }
