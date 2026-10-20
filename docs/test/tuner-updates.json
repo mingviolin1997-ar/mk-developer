@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "app": "AccessTuner",
+  "channels": {
+    "friends": {
+      "channelID": "friends",
+      "edition": "FriendFree",
+      "bundleIdentifier": "com.mingkong.tingxian",
+      "status": "published",
+      "version": "1.1.5",
+      "build": 24,
+      "minimumOSVersion": "17.0",
+      "releaseNotes": [
+        "记住上次选择的乐器或普通模式，重新打开时恢复并保持暂停。"
+      ],
+      "upgradeURL": "https://dev.mk-musician.com/test/",
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-tingxian-24-five-friends.plist"
+    }
+  }
+}
