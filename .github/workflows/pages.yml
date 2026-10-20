@@ -30,6 +30,12 @@ jobs:
         run: python3 scripts/test_download_routes.py
       - name: Check original source releases
         run: python3 scripts/check_reader_sources.py
+      - name: Fetch verified VoPlus 47 signed package
+        run: |
+          curl --fail --location --silent --show-error --retry 3 \
+            https://github.com/mingviolin1997-ar/mk-developer/releases/download/voplus-1.0.0-47/friends-voplus-1.0.0-47-five-friends.ipa \
+            --output docs/test/packages/friends-voplus-1.0.0-47-five-friends.ipa
+          echo '12f880c7c778db554cebec097f14e794bbd76151e5d9adb46e848447df560c50  docs/test/packages/friends-voplus-1.0.0-47-five-friends.ipa' | sha256sum --check --strict
       - name: Reuse verified immutable download routes
         uses: actions/cache@v4
         with:

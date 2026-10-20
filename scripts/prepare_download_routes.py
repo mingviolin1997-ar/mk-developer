@@ -19,11 +19,15 @@ PROXY = 'https://gh-proxy.com/'
 REPO = 'mingviolin1997-ar/mk-developer'
 ANCHOR = re.compile(r'<a\b[^>]*>.*?</a>', re.I | re.S)
 COMMIT = re.compile(r'[0-9a-f]{40}')
+# Signed IPA exceeds Git's file limit; deployment verifies its pinned SHA-256.
+LARGE_RELEASES = {'friends-voplus-1.0.0-47-five-friends.ipa': 'voplus-1.0.0-47'}
 
 
 def package_url(name, commit):
     if not COMMIT.fullmatch(commit):
         raise ValueError('invalid immutable source commit')
+    if name in LARGE_RELEASES:
+        return f'{PROXY}https://github.com/{REPO}/releases/download/{LARGE_RELEASES[name]}/{name}'
     return f'{PROXY}https://raw.githubusercontent.com/{REPO}/{commit}/docs/test/packages/{name}'
 
 
@@ -58,7 +62,7 @@ def verify_package(package, commit, cache_dir, opener=open_download):
             receipt = json.loads(key.read_text())
         except (ValueError, OSError):
             pass
-    cached = (receipt.get('sha256') == expected and receipt.get('bytes') == size
+    cached = (package.name not in LARGE_RELEASES and receipt.get('sha256') == expected and receipt.get('bytes') == size
               and receipt.get('filename') == package.name
               and COMMIT.fullmatch(str(receipt.get('commit', ''))))
     if cached:

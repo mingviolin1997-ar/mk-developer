@@ -142,5 +142,27 @@ class DownloadRouteTests(unittest.TestCase):
         self.assertEqual(len(requests), 2)
         self.assertIn('/' + fresh + '/', requests[-1])
 
+class LargeReleaseTests(unittest.TestCase):
+    def test_exact_large_release_route_only(self):
+        name = 'friends-voplus-1.0.0-47-five-friends.ipa'
+        self.assertEqual(MODULE.package_url(name, COMMIT), MODULE.PROXY + 'https://github.com/' + MODULE.REPO + '/releases/download/voplus-1.0.0-47/' + name)
+        self.assertIn('/' + COMMIT + '/docs/', MODULE.package_url('friends-voplus-1.0.0-48-five-friends.ipa', COMMIT))
+
+    def test_large_release_always_full_hash_checks(self):
+        with tempfile.TemporaryDirectory() as d:
+            p = pathlib.Path(d) / 'friends-voplus-1.0.0-47-five-friends.ipa'
+            p.write_bytes(b'signed package')
+            cache = pathlib.Path(d) / 'cache'
+            calls = []
+            class Response(io.BytesIO):
+                status = 200
+            def opener(req, **kwargs):
+                calls.append(req)
+                return Response(p.read_bytes() if len(calls) == 1 else b'bad replacement')
+            MODULE.verify_package(p, COMMIT, cache, opener=opener)
+            with self.assertRaises(ValueError):
+                MODULE.verify_package(p, COMMIT, cache, opener=opener)
+            self.assertNotIn('Range', calls[-1].headers)
+
 if __name__ == '__main__':
     unittest.main()
