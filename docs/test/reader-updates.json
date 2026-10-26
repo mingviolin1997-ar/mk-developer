@@ -7,32 +7,28 @@
       "edition": "OwnerTesting",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.22",
-      "build": 159,
+      "version": "1.0.24",
+      "build": 161,
       "releaseNotes": [
-        "恢复微软在线语音，改善小说章节加载和自动换源定位。",
-        "按喜马拉雅原站展示分类，改善短剧续播和播放控制。",
-        "修复带图片 EPUB 的原文滚动问题。",
-        "部分短剧资源仍可能无法播放，持续保留已知问题说明。"
+        "修复目录刷新后偶发的章节跳转位置错误。",
+        "目录可按章节名、序号或正文搜索，并跳到匹配段落。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/#ming-kong",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-159.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/ming-kong-reader-161.plist"
     },
     "friends": {
       "channelID": "friends",
       "edition": "FriendFree",
       "bundleIdentifier": "com.mingkong.tingshu.personal",
       "status": "published",
-      "version": "1.0.22",
-      "build": 159,
+      "version": "1.0.24",
+      "build": 161,
       "releaseNotes": [
-        "恢复微软在线语音，改善小说章节加载和自动换源定位。",
-        "按喜马拉雅原站展示分类，改善短剧续播和播放控制。",
-        "修复带图片 EPUB 的原文滚动问题。",
-        "部分短剧资源仍可能无法播放，持续保留已知问题说明。"
+        "修复目录刷新后偶发的章节跳转位置错误。",
+        "目录可按章节名、序号或正文搜索，并跳到匹配段落。"
       ],
       "upgradeURL": "https://dev.mk-musician.com/test/",
-      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-159-five-friends.plist"
+      "manifestURL": "https://dev.mk-musician.com/test/packages/friends-reader-161-five-friends.plist"
     }
   },
   "entryPoints": {
