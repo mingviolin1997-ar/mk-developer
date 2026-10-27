@@ -20,7 +20,7 @@ REPO = 'mingviolin1997-ar/mk-developer'
 ANCHOR = re.compile(r'<a\b[^>]*>.*?</a>', re.I | re.S)
 COMMIT = re.compile(r'[0-9a-f]{40}')
 # Signed IPA exceeds Git's file limit; deployment verifies its pinned SHA-256.
-LARGE_RELEASES = {'friends-voplus-1.0.0-47-five-friends.ipa': 'voplus-1.0.0-47', 'friends-voplus-1.0.0-50-five-friends.ipa': 'voplus-1.0.0-50'}
+LARGE_RELEASES = {'friends-voplus-1.0.0-47-five-friends.ipa': 'voplus-1.0.0-47', 'friends-voplus-1.0.0-50-five-friends.ipa': 'voplus-1.0.0-50', 'friends-voplus-1.0.0-59-five-friends.ipa': 'voplus-1.0.0-59'}
 
 
 def package_url(name, commit):
