@@ -14,7 +14,7 @@
   "voplus": {
     "status": "ready",
     "version": "1.0.0",
-    "build": "64",
-    "manifest": "https://dev.mk-musician.com/test/packages/friends-voplus-64-five-friends.plist"
+    "build": "69",
+    "manifest": "https://dev.mk-musician.com/test/packages/friends-voplus-69-five-friends.plist"
   }
 }
