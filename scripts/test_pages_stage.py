@@ -19,7 +19,9 @@ class PagesStageTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
-        self.root = pathlib.Path(self.tmp.name)
+        # macOS exposes its default temporary path through /var -> /private/var.
+        # Resolve the fixture root; production still rejects supplied symlinks.
+        self.root = pathlib.Path(self.tmp.name).resolve()
         self.source = self.root / 'docs'
         self.packages = self.source / 'test/packages'
         self.packages.mkdir(parents=True)
