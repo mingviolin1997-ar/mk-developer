@@ -51,6 +51,20 @@ def file_hash(path):
     return digest.hexdigest()
 
 
+def verify_range(package, commit, size, opener):
+    count = min(8192, size)
+    request = urllib.request.Request(package_url(package.name, commit), headers={
+        'Accept-Encoding': 'identity', 'Range': f'bytes=0-{count-1}',
+        'User-Agent': 'MK-Download-Verification/1.0'})
+    with opener(request, timeout=20) as response:
+        sample = response.read(count + 1)
+        if response.status != 206 or response.headers.get('Content-Range') != f'bytes 0-{count-1}/{size}':
+            raise ValueError('accelerator did not honor the expected byte range')
+    with package.open('rb') as source:
+        if sample != source.read(count):
+            raise ValueError('accelerator range differs from the signed package')
+
+
 def verify_package(package, commit, cache_dir, opener=open_download):
     """Reuse only an exact file's full-hash receipt, with a fresh range probe."""
     expected = file_hash(package)
@@ -67,17 +81,7 @@ def verify_package(package, commit, cache_dir, opener=open_download):
               and COMMIT.fullmatch(str(receipt.get('commit', ''))))
     if cached:
         pinned = receipt['commit']
-        count = min(8192, size)
-        request = urllib.request.Request(package_url(package.name, pinned), headers={
-            'Accept-Encoding': 'identity', 'Range': f'bytes=0-{count-1}',
-            'User-Agent': 'MK-Download-Verification/1.0'})
-        with opener(request, timeout=20) as response:
-            sample = response.read(count + 1)
-            if response.status != 206 or response.headers.get('Content-Range') != f'bytes 0-{count-1}/{size}':
-                raise ValueError('accelerator did not honor the expected byte range')
-        with package.open('rb') as source:
-            if sample != source.read(count):
-                raise ValueError('accelerator range differs from the signed package')
+        verify_range(package, pinned, size, opener)
         return pinned
 
     digest = hashlib.sha256()
@@ -94,6 +98,7 @@ def verify_package(package, commit, cache_dir, opener=open_download):
             digest.update(block)
     if received != size or digest.hexdigest() != expected:
         raise ValueError('accelerator package checksum or size mismatch')
+    verify_range(package, commit, size, opener)
     receipt = {'filename': package.name, 'commit': commit, 'sha256': expected,
                'bytes': size, 'verifiedAt': datetime.datetime.now(datetime.timezone.utc).isoformat()}
     cache_dir.mkdir(parents=True, exist_ok=True)
@@ -123,7 +128,7 @@ def local_package_path(site, url, suffix):
     if not match:
         raise ValueError('unexpected installation resource path')
     path = site / target.path.lstrip('/')
-    if path.is_symlink() or not path.is_file():
+    if any(part.is_symlink() for part in (path, path.parent, path.parent.parent)) or not path.is_file():
         raise ValueError('installation resource is missing or is a symlink')
     return path
 
@@ -144,8 +149,10 @@ def prepare_site(site, commit, verify):
             raise ValueError('unexpected install link')
         source = local_package_path(site, query['url'][0], '.plist')
         links[match.group()] = (source, attrs)
-        if source in manifests:
-            continue
+    # Keep previously shared /test/direct links, including older releases that
+    # no longer have a button on the current page. Validate all before writing.
+    for source in sorted((site / 'test/packages').glob('*.plist')):
+        source = local_package_path(site, f'{ORIGIN}/test/packages/{source.name}', '.plist')
         raw = source.read_bytes()
         manifest = plistlib.loads(raw)
         if len(manifest.get('items', [])) != 1:
@@ -158,7 +165,10 @@ def prepare_site(site, commit, verify):
 
     result = {'accelerated': [], 'direct': []}
     ready = {}
+    current = {source for source, attrs in links.values()}
     for source, (raw, manifest, asset, package) in manifests.items():
+        if source not in current:
+            continue
         try:
             pinned = verify(package, commit)
             url = package_url(package.name, pinned)
@@ -171,28 +181,30 @@ def prepare_site(site, commit, verify):
                                       'sha256': file_hash(package), 'bytes': package.stat().st_size,
                                       'sourceCommit': pinned, 'url': url})
 
-    for source, (raw, accelerated) in ready.items():
+    for source, (raw, manifest, asset, package) in manifests.items():
         fallback = site / 'test/direct' / source.name
         fallback.parent.mkdir(parents=True, exist_ok=True)
         fallback.write_bytes(raw)
-        source.write_bytes(accelerated)
+    for source, (raw, accelerated) in ready.items():
+        destination = site / 'test/accelerated' / source.name
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        destination.write_bytes(accelerated)
 
-    def add_original(match):
+    def add_accelerated(match):
         info = links.get(match.group())
         if not info or info[0] not in ready:
             return match.group()
         source, attrs = info
         label = html.unescape(re.sub('<[^>]+>', '', match.group()))
-        fallback = f'{ORIGIN}/test/direct/{source.name}'
+        fallback = f'{ORIGIN}/test/accelerated/{source.name}'
         href = 'itms-services://?action=download-manifest&url=' + urllib.parse.quote(fallback, safe='')
-        identity = html.escape(attrs.get('id', source.stem) + '-original', quote=True)
-        return (match.group() + '<details class="meta download-help">'
-                f'<summary aria-label="{html.escape(label + '，下载遇到问题？', quote=True)}">下载遇到问题？</summary>'
-                f'<p><a id="{identity}" href="{html.escape(href, quote=True)}" '
-                f'aria-label="{html.escape(label + '，原线路备用安装', quote=True)}">使用备用线路安装</a></p></details>')
+        identity = html.escape(attrs.get('id', source.stem) + '-accelerated', quote=True)
+        return (match.group() + '<p class="meta download-help">'
+                f'<a id="{identity}" href="{html.escape(href, quote=True)}" '
+                f'aria-label="{html.escape(label + '，备用加速线路', quote=True)}">备用加速线路</a></p>')
 
     if ready:
-        page_path.write_text(ANCHOR.sub(add_original, page))
+        page_path.write_text(ANCHOR.sub(add_accelerated, page))
     (site / 'test/download-routes.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
     return result
 
