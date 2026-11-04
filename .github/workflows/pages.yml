@@ -28,6 +28,8 @@ jobs:
         run: python3 scripts/test_reader_sources.py
       - name: Test signed-package download routing
         run: python3 scripts/test_download_routes.py
+      - name: Test isolated Pages staging and size contract
+        run: python3 scripts/test_pages_stage.py
       - name: Check original source releases
         run: python3 scripts/check_reader_sources.py
       - name: Fetch verified VoPlus 47 signed package
@@ -84,12 +86,14 @@ jobs:
           path: ~/.cache/mk-download-routes
           key: download-routes-v1-${{ hashFiles('docs/test/packages/*.ipa') }}
           restore-keys: download-routes-v1-
-      - name: Prepare verified accelerated downloads and original fallback
-        run: python3 scripts/prepare_download_routes.py
+      - name: Build bounded Pages artifact with original and verified backup downloads
+        run: python3 scripts/build_pages_stage.py --source docs --output work/pages-site
+      - name: Enforce Pages artifact byte limit
+        run: python3 scripts/build_pages_stage.py --check-size work/pages-site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: work/pages-site
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

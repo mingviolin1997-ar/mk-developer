@@ -133,7 +133,7 @@ def local_package_path(site, url, suffix):
     return path
 
 
-def prepare_site(site, commit, verify):
+def prepare_site(site, commit, verify, package_source=None):
     page_path = site / 'test/index.html'
     page = page_path.read_text()
     manifests = {}
@@ -160,7 +160,9 @@ def prepare_site(site, commit, verify):
         assets = [asset for asset in manifest['items'][0]['assets'] if asset.get('kind') == 'software-package']
         if len(assets) != 1:
             raise ValueError('expected one signed IPA per installation manifest')
-        package = local_package_path(site, assets[0]['url'], '.ipa')
+        # Staging can omit historical IPA copies; URLs still must be local and
+        # the actual signed bytes are read from the explicitly supplied source.
+        package = local_package_path(package_source or site, assets[0]['url'], '.ipa')
         manifests[source] = (raw, manifest, assets[0], package)
 
     result = {'accelerated': [], 'direct': []}
