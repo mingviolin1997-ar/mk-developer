@@ -110,6 +110,12 @@ jobs:
             https://github.com/mingviolin1997-ar/mk-developer/releases/download/voplus-1.0.0-86/friends-voplus-1.0.0-86-five-friends.ipa \
             --output docs/test/packages/friends-voplus-1.0.0-86-five-friends.ipa
           echo '924464326c5804463053bac995158a1e08404682467e72a9c4f653c8a1b49799  docs/test/packages/friends-voplus-1.0.0-86-five-friends.ipa' | sha256sum --check --strict
+      - name: Fetch verified VoPlus 87 signed package
+        run: |
+          curl --fail --location --silent --show-error --retry 3 \
+            https://github.com/mingviolin1997-ar/mk-developer/releases/download/voplus-1.0.0-87/friends-voplus-1.0.0-87-five-friends.ipa \
+            --output docs/test/packages/friends-voplus-1.0.0-87-five-friends.ipa
+          echo '5eae00c7d4478d105ed3da754e24d4fef5be08d815939e55cd969a7df76ff316  docs/test/packages/friends-voplus-1.0.0-87-five-friends.ipa' | sha256sum --check --strict
       - name: Reuse verified immutable download routes
         uses: actions/cache@v4
         with:
