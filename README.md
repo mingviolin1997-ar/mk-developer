@@ -71,3 +71,9 @@ GitHub Release 上传时，`gh release create` 的 `path#text` 只设置显示�
 |WEB-C04 清理与证据|2026-11-03 活动任务根为 `/Users/mingkong/Documents/Codex/2026-11-03/carnegie-library-apple-store-iphone-18-2`；`work/dev-download-repair/fixtures/` 为自动销毁的小夹具，RED/验证日志和只读容量预检保留。当前闭包六个 IPA 的发布内容预计约 428 MB，CI 暂存 `work/pages-site/` 只供本轮上传、可重建；GitHub runner 随 job 销毁，哈希回执复用有边界的 `~/.cache/mk-download-routes`。无通用清空脚本，收尾只核对明确归属且不再占用的临时路径；保留源码、Git、包、失败证据与回滚依据，不声称目录统计等于释放空间。|
 
 Mac 每次真实启动异步检查新版本；iOS/iPadOS 免于启动更新查询，仍要求按版本/构建显示可关闭、VoiceOver 可读的首次新特性。本网站修复不改应用二进制或声称其行为已变。
+
+## 旁白Plus独立平台版公开说明
+
+WEB-R06 / WEB-C06：`docs/voplus-platform/support/index.html` 与 `docs/voplus-platform/privacy/index.html` 分别发布到 `/voplus-platform/support/` 和 `/voplus-platform/privacy/`。页面明确平台尚未公开发行，只提供使用及隐私说明，不包含声音模型、凭据、收费入口或候选安装包；保留所有现有测试安装入口。静态页面不加载外部脚本、字体或图片，使用语义标题和可见焦点。
+
+维护源位于旁白Plus开发根 `Store/Website/`；发布只更新这两个路径及本说明，沿用当前Pages流程。生命周期沿WEB-R04/C04，开发证据位于该项目 `work/research/appstore-platform-20261115/store-public-pages/`，2MiB文本预算，不复制仓库/模型/签名包，不清理历史资产。页面发布不代表App Store提交、签名运行验收或内部build90安装包改变；上线需核对工作流和HTTPS完整内容哈希。

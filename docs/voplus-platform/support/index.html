@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>旁白Plus平台版使用与支持</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { max-width: 54rem; margin: 2rem auto; padding: 0 1.25rem; font: 1.1rem/1.75 system-ui, sans-serif; color: #142b31; background: #f8fbfc; overflow-wrap: anywhere; }
+    a { color: #075d75; text-underline-offset: .18em; }
+    h1, h2 { line-height: 1.35; }
+    h2 { margin-top: 2rem; }
+    li + li { margin-top: .5rem; }
+    nav { margin-bottom: 2rem; }
+    nav a { display: inline-block; padding: .5rem 0; margin-right: 1.5rem; }
+    :focus-visible { outline: 3px solid #075d75; outline-offset: 4px; }
+    @media (prefers-color-scheme: dark) { body { color: #e7f2f4; background: #112127; } a { color: #86d8e9; } :focus-visible { outline-color: #86d8e9; } }
+  </style>
+</head>
+<body>
+  <nav aria-label="旁白Plus平台版"><a href="../support/" aria-current="page">使用与支持</a><a href="../privacy/">隐私说明</a></nav>
+  <main>
+    <h1>旁白Plus平台版使用与支持</h1>
+    <p>旁白Plus平台版正在开发，尚未公开发行。本页说明平台版的使用方式；现有内部测试版的安装渠道保持不变。</p>
+    <h2>开始使用</h2>
+    <ol>
+      <li>打开“语音库管理”，选择设备已安装的系统声音，或导入兼容的语音包。</li>
+      <li>创建方案，选择主语音和可选的副语音，调整各自的语速、音量、音高和均衡器，然后保存。</li>
+      <li>在 iOS 的“设置 → 辅助功能 → 旁白 → 语音”中选择保存的旁白Plus方案。</li>
+    </ol>
+    <h2>安装和管理语音包</h2>
+    <p>平台版不预装第三方声音模型。你可以从自己选择的网站下载兼容的 .vopack 文件，通过“文件”分享给旁白Plus，或在应用中选择文件。也可以打开“语音库管理 → 从链接下载语音包”，粘贴 HTTPS 链接。</p>
+    <p>下载完成后，检查包名称和版本，再确认导入。系统声音引用包需要设备已安装对应声音；模型数据包需要与应用支持的引擎兼容。若模型需要凭据，可在模型管理页添加。</p>
+    <p>语音库管理支持更新、回退和删除模型。删除模型不会更改保存的方案参数，也不会删除“文件”中的原始下载文件；使用该模型的方案需要重新安装模型或换用其他声音。删除模型会保留凭据，如需清除，可进入“语音库管理 → 模型凭据”，选择声音并确认移除。</p>
+    <h2>读法如何更新</h2>
+    <p>应用已支持的发音替换和数字偏好可通过 .voprules 规则包更新。在应用中导入后，需要在方案里明确选择继承包设置。原有自定义规则和方案不会被默认覆盖。</p>
+    <p>声音模型的更新使用语音包；新增引擎、解析或音频处理能力，以及需要修改应用代码的兼容性修复，则需要更新 App。</p>
+    <h2>反馈问题</h2>
+    <p>请提供 App 版本、iOS 版本、主副语音名称，以及一段不含私人信息的复现文字。若要分享诊断日志，请先检查日志是否包含私人朗读内容。</p>
+    <p>联系开发者 Ming Kong：<a href="mailto:mkong.musician@gmail.com">mkong.musician@gmail.com</a>。</p>
+  </main>
+</body>
+</html>

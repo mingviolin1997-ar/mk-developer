@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>旁白Plus平台版隐私说明</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { max-width: 54rem; margin: 2rem auto; padding: 0 1.25rem; font: 1.1rem/1.75 system-ui, sans-serif; color: #142b31; background: #f8fbfc; overflow-wrap: anywhere; }
+    a { color: #075d75; text-underline-offset: .18em; }
+    h1, h2 { line-height: 1.35; }
+    h2 { margin-top: 2rem; }
+    li + li { margin-top: .5rem; }
+    nav { margin-bottom: 2rem; }
+    nav a { display: inline-block; padding: .5rem 0; margin-right: 1.5rem; }
+    :focus-visible { outline: 3px solid #075d75; outline-offset: 4px; }
+    @media (prefers-color-scheme: dark) { body { color: #e7f2f4; background: #112127; } a { color: #86d8e9; } :focus-visible { outline-color: #86d8e9; } }
+  </style>
+</head>
+<body>
+  <nav aria-label="旁白Plus平台版"><a href="../support/">使用与支持</a><a href="../privacy/" aria-current="page">隐私说明</a></nav>
+  <main>
+    <h1>旁白Plus平台版隐私说明</h1>
+    <p>更新日期：2026年11月15日。本页对应尚未公开发行的旁白Plus平台版。</p>
+    <h2>本地处理</h2>
+    <p>平台版在设备上处理朗读文字、方案和规则，不向开发者服务器上传屏幕文字或合成音频。系统声音由 iOS 提供和管理。平台版可导入系统声音引用包，以及与应用内置引擎兼容的模型数据包；安装包不预装第三方声音模型。</p>
+    <h2>文件与模型凭据</h2>
+    <p>你主动选择的语音包、规则包和方案保存在应用的共享容器中，供应用及其语音扩展使用。应用只接受支持的数据格式，不执行包内程序。模型凭据单独保存在此设备的钥匙串中，不写入语音包或诊断日志。</p>
+    <h2>下载时的网络连接</h2>
+    <p>在网站或文件服务下载文件时，该服务可能接收 IP 地址等连接信息，适用其自身政策。在应用内粘贴 HTTPS 链接并开始下载语音包时，应用会连接你选择的网址；该网站会收到 IP 地址和链接中的信息。</p>
+    <p>下载请求不附带语音方案、模型凭据或朗读内容。应用不会在后台定期查询这些下载网站；下载完成后仍需你检查并保存。</p>
+    <h2>诊断日志</h2>
+    <p>你可以启用、导出和清除诊断日志。只有另外开启“记录朗读内容”才会记录相应文字，这些文字可能包含私人信息。请在分享前检查。应用不会自动上传日志；你主动发送给开发者的反馈及附件会用于处理该问题，如需删除已发送的反馈，可联系下方邮箱。</p>
+    <h2>购买与兑换</h2>
+    <p>当前平台候选尚未开放收费。若后续版本开放 Apple 内购或官方兑换码，支付由 Apple 处理，应用通过验证过的交易判断权益，不接触银行卡资料。收费开放前会同步更新说明和界面。</p>
+    <h2>数据管理与备份</h2>
+    <p>你可以在应用内删除方案、规则、语音包记录和日志。模型文件如仍用于朗读，会暂时保留。模型凭据可在“语音库管理 → 模型凭据”中单独移除，即使对应模型已经删除。</p>
+    <p>删除系统声音引用包不会删除 iOS 管理的声音，也不会删除“文件”中的原件。设备备份、iCloud 文件及 Apple 交易记录由对应系统和服务管理，需分别处理。</p>
+    <h2>跟踪与联系</h2>
+    <p>应用不集成广告、跨应用跟踪或第三方行为分析。</p>
+    <p>开发者 Ming Kong。支持与隐私联系：<a href="mailto:mkong.musician@gmail.com">mkong.musician@gmail.com</a>。</p>
+  </main>
+</body>
+</html>
