@@ -4,14 +4,17 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Wonder 音频分离 更新</title>
         <item>
-            <title>0.3.0</title>
-            <pubDate>Tue, 20 Oct 2026 05:09:47 -0400</pubDate>
+            <title>0.4.0</title>
+            <pubDate>Tue, 24 Nov 2026 17:52:03 -0500</pubDate>
             <link>https://dev.mk-musician.com/wonder-audio-separator/</link>
             <sparkle:channel>friends</sparkle:channel>
-            <sparkle:version>17</sparkle:version>
-            <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
+            <sparkle:version>18</sparkle:version>
+            <sparkle:shortVersionString>0.4.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="plain-text">Wonder 音频分离 0.3.0（17）
+            <description sparkle:format="plain-text">Wonder 音频分离 0.4.0（18）
+升级至 Pymss Studio 0.1.2 与分离内核 2.4.1。新增多语言源音轨选择、模型多选与批量下载、原生插件工具及高级工作流参数。音频编辑器新增实验性 AU/VST 效果链、可访问参数和主限幅，保留旧效果及 WAV、FLAC、MP3、M4A 导出。修正 TTA 总进度、插件取消与状态归属，默认卡拉 OK 继续内置并支持 Apple GPU。常用流程与快捷键保持不变，高级功能集中在明确入口。
+
+Wonder 音频分离 0.3.0（17）
 新手流程更简单：导入歌曲后选择音质即可开始，保存位置直接可见。已下载模型可直接用于当前歌曲，不必重新导入；Cmd+3 可开始分离，完成后 Cmd+4 查看刚生成的成品。高级参数集中收起，保留原有快捷键和音轨选择记忆。适配 Pymss Studio 0.0.21 与分离内核 2.1.9，修复新版声道参数兼容及依赖更新环境，保留 GPU 和 TTA 总进度；新增原生响度统一工具。
 
 Wonder 音频分离 0.2.2（16）
@@ -22,14 +25,11 @@ Wonder 音频分离 0.2.1（15）
 
 Wonder 音频分离 0.2.0（14）
 软件正式更名为 Wonder 音频分离。现有模型、歌曲和历史继续使用，旧设置自动兼容。每次打开会后台检查更新，也可在应用菜单或软件设置中检查；支持直接下载、安装并重新打开，活动任务结束后再重启。Command+Shift+U 检查更新。继续内置保留和声的卡拉 OK 模型、GPU 加速及 TTA 总进度。
-
-Wonder 音频分离 0.1.0（13）
-内置保留和声的卡拉 OK 模型；首次打开准备模型。结果保存位置可见，任务、历史和音轨支持在访达显示或另存。保留 GPU、TTA 总进度和提示音。
 </description>
-            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-audio-separator-v0.3.0-build17/Wonder-Audio-Separator-0.3.0-build17-arm64.dmg" length="555295957" type="application/octet-stream" sparkle:edSignature="67kRZhUhsh+9lA5I7dPgCQUOlHz2OhwMHLw4BGjKe9rULBvoLVppA5WTLijsBXTR6nxt3d0a8oYM/4R58MeOBg=="></enclosure>
-        <wonder:bundleIdentifier>org.mingkong.WonderAudioSeparator</wonder:bundleIdentifier><wonder:released>true</wonder:released><wonder:publishedAt>2026-10-20T09:10:13Z</wonder:publishedAt><sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements></item>
+            <enclosure url="https://github.com/mingviolin1997-ar/mk-developer/releases/download/wonder-audio-separator-v0.4.0-build18/Wonder-Audio-Separator-0.4.0-build18-arm64.dmg" length="533548879" type="application/octet-stream" sparkle:edSignature="nbbeLE1ou7rfCnTPxlc0IUj5pdGi8JVBEbET1iFhlJ4kGIMRK+AcV0zOLYh5Du9m1ZArhuI20Pplrtq4yh8SAA=="></enclosure>
+        <wonder:bundleIdentifier>org.mingkong.WonderAudioSeparator</wonder:bundleIdentifier><wonder:released>true</wonder:released><wonder:publishedAt>2026-11-24T22:52:33Z</wonder:publishedAt><sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements></item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: T4CGlCDRSBs90+4qmjs7zn8zKhx6f6N41yGKIbso/WhZUU2X4IuX3CPrIb4+HAQpeG2m+zp43sdoCe/qkKJsAw==
-length: 3592
+edSignature: P/geECggRwXGpwhE+Bw6yiz7dVxyFJLs7IngRvmsFyCOeX8GEEibIRFCiAvldQx8R2aTTXSxbu7FctZIBgqbDA==
+length: 3870
 -->
